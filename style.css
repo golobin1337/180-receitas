@@ -73,76 +73,99 @@ body {
     line-height: 1;
 }
 .hero-sub {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
-    font-size: clamp(17px, 2.6vw, 22px);
-    color: #666;
-    max-width: 560px;
-    margin: 0 auto 44px;
-    line-height: 1.5;
+    font-size: clamp(16px, 2.2vw, 19px);
+    color: #555;
+    max-width: 600px;
+    margin: 0 auto 32px;
+    line-height: 1.65;
 }
+.hero-sub .hl { color: #FF6F00; font-weight: 700; }
 
-/* product block */
-.hero-product {
+/* book mockup — centered */
+.hero-book-wrap {
     display: flex;
-    align-items: center;
     justify-content: center;
-    gap: 44px;
-    flex-wrap: wrap;
-    margin-bottom: 40px;
+    margin: 0 auto 36px;
 }
-.hero-mockup {
-    width: 210px;
-    min-height: 275px;
-    background: linear-gradient(145deg, #C62828 0%, #7B0000 100%);
-    border-radius: 14px;
-    box-shadow: 0 22px 60px rgba(198,40,40,.42), 0 6px 18px rgba(0,0,0,.22);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+.hero-book {
+    width: min(380px, 88vw);
+    background: linear-gradient(145deg, #2C1008, #6B2E00);
+    border-radius: 20px;
+    padding: 36px 28px 32px;
+    box-shadow: 0 24px 64px rgba(0,0,0,.38), 0 8px 24px rgba(0,0,0,.2);
+    text-align: center;
     color: #fff;
     font-family: 'Montserrat', sans-serif;
-    padding: 24px 18px;
     position: relative;
     overflow: hidden;
-    flex-shrink: 0;
 }
-.hero-mockup::before {
+.hero-book::before {
     content: '';
     position: absolute;
-    top: -40px; right: -40px;
-    width: 130px; height: 130px;
-    background: rgba(255,255,255,.07);
-    border-radius: 50%;
-}
-.hero-mockup::after {
-    content: '';
-    position: absolute;
-    bottom: -30px; left: -30px;
-    width: 100px; height: 100px;
+    top: -50px; right: -50px;
+    width: 180px; height: 180px;
     background: rgba(255,255,255,.05);
     border-radius: 50%;
 }
-.hero-mockup-eyebrow { font-size: 10px; letter-spacing: 2.5px; text-transform: uppercase; opacity: .7; margin-bottom: 10px; }
-.hero-mockup-title   { font-size: 26px; font-weight: 900; text-align: center; line-height: 1.1; }
-.hero-mockup-divider { width: 40px; height: 2px; background: rgba(255,255,255,.35); margin: 10px auto; }
-.hero-mockup-sub     { font-size: 12px; opacity: .8; text-align: center; line-height: 1.4; }
-.hero-mockup-emoji   { font-size: 46px; margin-top: 14px; }
+.hero-book::after {
+    content: '';
+    position: absolute;
+    bottom: -40px; left: -40px;
+    width: 140px; height: 140px;
+    background: rgba(255,255,255,.04);
+    border-radius: 50%;
+}
+.hero-book-eyebrow {
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    opacity: .55;
+    margin-bottom: 6px;
+}
+.hero-book-num {
+    font-size: clamp(72px, 18vw, 108px);
+    font-weight: 900;
+    color: #FFD700;
+    line-height: 1;
+    text-shadow: 0 4px 16px rgba(0,0,0,.5);
+}
+.hero-book-title {
+    font-size: clamp(16px, 4vw, 22px);
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    line-height: 1.3;
+    margin-top: 4px;
+}
+.hero-book-divider {
+    width: 50px;
+    height: 3px;
+    background: rgba(255,215,0,.45);
+    margin: 14px auto;
+    border-radius: 2px;
+}
+.hero-book-deco { font-size: 28px; letter-spacing: 6px; }
 
-/* price + cta */
-.hero-right { text-align: left; max-width: 320px; }
-.price-block { margin-bottom: 24px; }
-.price-old { font-size: 19px; color: #999; text-decoration: line-through; font-family: 'Montserrat', sans-serif; }
-.price-new {
+/* price — centered */
+.price-center { margin-bottom: 28px; }
+.price-from { font-size: 16px; color: #888; margin-bottom: 4px; }
+.price-strike { text-decoration: line-through; color: #C0392B; font-weight: 600; }
+.price-big {
     font-family: 'Montserrat', sans-serif;
     font-weight: 900;
-    font-size: clamp(46px, 7vw, 64px);
-    color: #C62828;
+    font-size: clamp(52px, 10vw, 76px);
+    color: #2E7D32;
     line-height: 1;
 }
-.price-new sup { font-size: 22px; vertical-align: super; }
-.price-note { font-size: 13px; color: #888; margin-top: 4px; }
+.price-currency { font-size: 26px; vertical-align: super; }
+
+/* hero cta */
+.btn-hero {
+    font-size: clamp(16px, 2.2vw, 19px) !important;
+    padding: 22px 56px !important;
+    min-width: min(360px, 90vw);
+    display: inline-block;
+}
 
 .btn {
     display: inline-block;
