@@ -115,6 +115,13 @@ body {
     background: rgba(255,255,255,.04);
     border-radius: 50%;
 }
+.hero-img {
+    width: min(420px, 90vw);
+    border-radius: 20px;
+    box-shadow: 0 24px 64px rgba(0,0,0,.25), 0 8px 24px rgba(0,0,0,.15);
+    display: block;
+}
+
 .hero-book-eyebrow {
     font-size: 11px;
     letter-spacing: 3px;
