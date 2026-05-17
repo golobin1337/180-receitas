@@ -357,7 +357,7 @@ body {
 /* ── DOBRA 3 — URGENCY MID ── */
 .urgency-mid {
     background: #FFF8F2;
-    padding: 0 20px 56px;
+    padding: 48px 20px 56px;
 }
 .urgency-connector {
     display: flex;
@@ -479,6 +479,13 @@ body {
     align-items: center;
     justify-content: center;
     font-size: 50px;
+    overflow: hidden;
+}
+.gallery-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 .gallery-kcal {
     position: absolute;
