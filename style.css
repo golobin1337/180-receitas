@@ -313,19 +313,20 @@ body {
 
 /* transition */
 .transition-block {
-    background: linear-gradient(135deg, #0F1225 0%, #1E2456 50%, #0F1225 100%);
-    padding: 70px 20px;
+    background: #FFF8F2;
+    padding: 70px 20px 0;
     text-align: center;
     position: relative;
     overflow: hidden;
+    border-top: 1px solid #FFE8D6;
 }
 .transition-block::before {
     content: '';
     position: absolute;
     inset: 0;
     background:
-        radial-gradient(ellipse at 20% 50%, rgba(255,179,0,.08) 0%, transparent 60%),
-        radial-gradient(ellipse at 80% 50%, rgba(198,40,40,.1) 0%, transparent 60%);
+        radial-gradient(ellipse at 20% 50%, rgba(255,111,0,.06) 0%, transparent 60%),
+        radial-gradient(ellipse at 80% 50%, rgba(198,40,40,.06) 0%, transparent 60%);
     pointer-events: none;
 }
 .transition-block-inner {
@@ -342,22 +343,42 @@ body {
     font-family: 'Montserrat', sans-serif;
     font-weight: 800;
     font-size: clamp(22px, 3.5vw, 36px);
-    color: #fff;
+    color: #1A1A2E;
     line-height: 1.4;
 }
 .transition-block span { color: #FFB300; }
 .transition-block-line {
-    width: 60px;
-    height: 4px;
-    background: linear-gradient(90deg, #FFB300, #C62828);
-    border-radius: 2px;
-    margin: 24px auto 0;
+    display: none;
 }
 
 /* ── DOBRA 3 — URGENCY MID ── */
 .urgency-mid {
-    background: #FFF5F0;
-    padding: 40px 20px;
+    background: #FFF8F2;
+    padding: 0 20px 56px;
+}
+.urgency-connector {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 28px;
+}
+.urgency-connector-line {
+    width: 1.5px;
+    height: 44px;
+    background: linear-gradient(to bottom, transparent, #C62828 60%);
+    opacity: .35;
+}
+.urgency-connector-line:last-child {
+    background: linear-gradient(to bottom, #C62828 40%, transparent);
+}
+.urgency-connector-label {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 11px;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: #C62828;
+    padding: 10px 0;
 }
 .urgency-card {
     background: linear-gradient(145deg, #D94F3D, #C0392B);
@@ -459,7 +480,7 @@ body {
 .gallery-kcal {
     position: absolute;
     top: 8px; right: 8px;
-    background: rgba(26,26,46,.85);
+    background: rgba(44,16,8,.82);
     color: #FFB300;
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
@@ -484,16 +505,17 @@ body {
 }
 
 /* ── DOBRA 6 — BONUSES ── */
-.bonus-sec { background: #1A1A2E; }
-.bonus-sec .sec-sub { color: #9DA8C6; }
+.bonus-sec { background: #FFF8F2; }
+.bonus-sec .sec-sub { color: #777; }
 .bonus-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(278px, 1fr)); gap: 22px; }
 .bonus-card {
-    background: linear-gradient(135deg, #232B55, #2E1F6E);
-    border: 1px solid rgba(255,179,0,.25);
+    background: #fff;
+    border: 1px solid #FFE0C8;
     border-top: 4px solid #FFB300;
     border-radius: 12px;
     padding: 30px 22px;
     text-align: center;
+    box-shadow: 0 4px 16px rgba(0,0,0,.06);
     transition: transform .2s;
 }
 .bonus-card:hover { transform: translateY(-4px); }
@@ -511,8 +533,8 @@ body {
     margin-bottom: 16px;
 }
 .bonus-icon { font-size: 44px; margin-bottom: 14px; }
-.bonus-title { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 16px; color: #fff; margin-bottom: 10px; line-height: 1.3; }
-.bonus-desc { font-size: 13.5px; color: #9DA8C6; line-height: 1.55; }
+.bonus-title { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 16px; color: #1A1A2E; margin-bottom: 10px; line-height: 1.3; }
+.bonus-desc { font-size: 13.5px; color: #666; line-height: 1.55; }
 
 /* ── DOBRA 7 — PRICING ── */
 .pricing-sec { background: #F4F4F4; }
@@ -546,15 +568,16 @@ body {
     padding: 9px;
 }
 .plan-header {
-    background: linear-gradient(135deg, #1A1A2E, #2D3561);
+    background: #FFF8F2;
+    border-bottom: 1px solid #FFE0C8;
     padding: 28px 22px;
     text-align: center;
 }
-.plan-name { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 22px; color: #fff; margin-bottom: 14px; }
-.plan-price-old { font-size: 15px; color: #9DA8C6; text-decoration: line-through; }
-.plan-price { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 50px; color: #FFB300; line-height: 1; }
+.plan-name { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 22px; color: #1A1A2E; margin-bottom: 14px; }
+.plan-price-old { font-size: 15px; color: #999; text-decoration: line-through; }
+.plan-price { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 50px; color: #E8531A; line-height: 1; }
 .plan-price sup { font-size: 20px; vertical-align: super; }
-.plan-price-note { color: #9DA8C6; font-size: 12px; margin-top: 4px; }
+.plan-price-note { color: #888; font-size: 12px; margin-top: 4px; }
 .plan-body { padding: 26px 22px; }
 .plan-features { list-style: none; margin-bottom: 26px; }
 .plan-features li {
@@ -687,7 +710,8 @@ body {
 
 /* ── DOBRA 10 — FINAL CTA ── */
 .final-cta {
-    background: linear-gradient(135deg, #1A1A2E 0%, #2D3561 100%);
+    background: #FFF8F2;
+    border-top: 1px solid #FFE8D6;
     padding: 90px 20px;
     text-align: center;
 }
@@ -695,15 +719,15 @@ body {
     font-family: 'Montserrat', sans-serif;
     font-weight: 900;
     font-size: clamp(26px, 4.5vw, 50px);
-    color: #fff;
+    color: #1A1A2E;
     max-width: 700px;
     margin: 0 auto 14px;
     line-height: 1.2;
 }
-.final-cta h2 span { color: #FFB300; }
-.final-cta-sub { color: #9DA8C6; font-size: 17px; margin-bottom: 40px; }
-.final-cta-sub strong { color: #fff; }
-.final-cta .trust-row { justify-content: center; margin-top: 20px; color: #9DA8C6; }
+.final-cta h2 span { color: #C62828; }
+.final-cta-sub { color: #666; font-size: 17px; margin-bottom: 40px; }
+.final-cta-sub strong { color: #1A1A2E; }
+.final-cta .trust-row { justify-content: center; margin-top: 20px; color: #888; }
 
 /* ── FOOTER ── */
 .footer { background: #111; padding: 32px 20px; text-align: center; }
