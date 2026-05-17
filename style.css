@@ -567,35 +567,49 @@ body {
     background: #fff;
     border-radius: 16px;
     overflow: hidden;
-    box-shadow: 0 6px 28px rgba(0,0,0,.11);
+    box-shadow: 0 4px 20px rgba(0,0,0,.09);
+    border: 1.5px solid #EEE;
 }
 .plan-card.featured {
-    box-shadow: 0 12px 50px rgba(198,40,40,.28);
-    transform: scale(1.04);
+    border: 2px solid #2E7D32;
+    box-shadow: 0 12px 48px rgba(46,125,50,.22);
 }
-@media (max-width: 620px) { .plan-card.featured { transform: none; } }
 .plan-badge {
-    background: #C62828;
+    display: inline-block;
+    background: #FF6F00;
     color: #fff;
     font-family: 'Montserrat', sans-serif;
     font-weight: 800;
-    font-size: 12px;
+    font-size: 11px;
     letter-spacing: 1px;
     text-transform: uppercase;
-    text-align: center;
-    padding: 9px;
+    padding: 5px 14px;
+    border-radius: 20px;
+    margin-bottom: 14px;
+    box-shadow: 0 3px 10px rgba(0,0,0,.2);
 }
 .plan-header {
     background: #FFF8F2;
     border-bottom: 1px solid #FFE0C8;
-    padding: 28px 22px;
+    padding: 24px 22px;
     text-align: center;
 }
-.plan-name { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 22px; color: #1A1A2E; margin-bottom: 14px; }
-.plan-price-old { font-size: 15px; color: #999; text-decoration: line-through; }
-.plan-price { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 50px; color: #2E7D32; line-height: 1; }
-.plan-price sup { font-size: 20px; vertical-align: super; }
-.plan-price-note { color: #888; font-size: 12px; margin-top: 4px; }
+.plan-card.featured .plan-header {
+    background: linear-gradient(145deg, #2E7D32, #43A047);
+    border-bottom: none;
+}
+.plan-name { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 24px; color: #1A1A2E; margin-bottom: 4px; }
+.plan-card.featured .plan-name { color: #fff; }
+.plan-subtitle { font-size: 13px; color: #888; margin-bottom: 14px; }
+.plan-card.featured .plan-subtitle { color: rgba(255,255,255,.78); }
+.plan-price-old { font-size: 14px; color: #999; text-decoration: line-through; margin-bottom: 2px; }
+.plan-card.featured .plan-price-old { color: rgba(255,255,255,.6); }
+.plan-price { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 54px; color: #2E7D32; line-height: 1; }
+.plan-card.featured .plan-price { color: #fff; }
+.plan-price sup { font-size: 22px; vertical-align: super; }
+.plan-price-note { color: #888; font-size: 12px; margin-top: 6px; }
+.plan-card.featured .plan-price-note { color: rgba(255,255,255,.75); }
+.gift { font-size: 15px; flex-shrink: 0; }
 .plan-body { padding: 26px 22px; }
 .plan-body .btn { display: block; text-align: center; white-space: nowrap; }
 .plan-features { list-style: none; margin-bottom: 26px; }
