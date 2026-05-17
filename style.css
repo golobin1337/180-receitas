@@ -356,52 +356,61 @@ body {
 
 /* ── DOBRA 3 — URGENCY MID ── */
 .urgency-mid {
-    background: linear-gradient(135deg, #B71C1C 0%, #C62828 50%, #B71C1C 100%);
-    padding: 28px 20px;
+    background: #FFF5F0;
+    padding: 40px 20px;
+}
+.urgency-card {
+    background: linear-gradient(145deg, #D94F3D, #C0392B);
+    border-radius: 20px;
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 44px 40px;
     text-align: center;
+    box-shadow: 0 12px 50px rgba(192,57,43,.35), 0 4px 16px rgba(0,0,0,.1);
     position: relative;
     overflow: hidden;
 }
-.urgency-mid::before {
+.urgency-card::before {
     content: '';
     position: absolute;
-    inset: 0;
-    background: repeating-linear-gradient(
-        45deg,
-        transparent,
-        transparent 20px,
-        rgba(255,255,255,.03) 20px,
-        rgba(255,255,255,.03) 40px
-    );
+    top: -60px; right: -60px;
+    width: 200px; height: 200px;
+    background: rgba(255,255,255,.06);
+    border-radius: 50%;
     pointer-events: none;
 }
-.urgency-mid-inner {
-    position: relative;
-    display: inline-flex;
-    align-items: center;
-    gap: 16px;
-    flex-wrap: wrap;
-    justify-content: center;
+.urgency-card::after {
+    content: '';
+    position: absolute;
+    bottom: -50px; left: -50px;
+    width: 160px; height: 160px;
+    background: rgba(255,255,255,.04);
+    border-radius: 50%;
+    pointer-events: none;
 }
-.urgency-mid-text {
+.urgency-icon {
+    font-size: 44px;
+    display: block;
+    margin-bottom: 16px;
+}
+.urgency-title {
     font-family: 'Montserrat', sans-serif;
-    font-weight: 800;
-    font-size: clamp(15px, 2.4vw, 20px);
-    color: #fff;
-    letter-spacing: .4px;
-}
-.urgency-mid .disc-badge {
-    display: inline-flex;
-    align-items: center;
-    background: #FFB300;
-    color: #1A1A2E;
-    padding: 6px 16px;
-    border-radius: 6px;
-    font-size: 13px;
     font-weight: 900;
-    font-family: 'Montserrat', sans-serif;
-    letter-spacing: .5px;
-    box-shadow: 0 2px 8px rgba(0,0,0,.2);
+    font-size: clamp(26px, 4vw, 42px);
+    color: #fff;
+    line-height: 1.15;
+    margin-bottom: 14px;
+    position: relative;
+}
+.urgency-sub {
+    font-size: clamp(14px, 1.8vw, 16px);
+    color: rgba(255,255,255,.85);
+    line-height: 1.6;
+    position: relative;
+}
+.urgency-hl {
+    color: #FFD700;
+    font-weight: 700;
 }
 
 /* ── DOBRA 4 — BENEFITS ── */
