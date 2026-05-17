@@ -238,20 +238,42 @@ body {
 
 /* ── SOCIAL PROOF BAR ── */
 .sp-bar {
-    background: #1A1A2E;
-    padding: 26px 20px;
+    background: #FFF0EB;
+    padding: 28px 20px;
 }
 .sp-bar-inner {
     max-width: 680px;
     margin: 0 auto;
     display: flex;
     justify-content: center;
-    gap: 44px;
+    gap: 16px;
     flex-wrap: wrap;
 }
-.stat { text-align: center; color: #fff; }
-.stat-n { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 34px; color: #FFB300; line-height: 1; }
-.stat-l { font-size: 13px; opacity: .65; margin-top: 3px; }
+.stat {
+    text-align: center;
+    background: #fff;
+    border: 1.5px solid #FFD5C8;
+    border-radius: 14px;
+    padding: 18px 32px;
+    min-width: 160px;
+    flex: 1;
+    max-width: 200px;
+}
+.stat-n {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: 30px;
+    color: #E8531A;
+    line-height: 1;
+}
+.stat-l {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    color: #999;
+    margin-top: 5px;
+}
 
 /* ── SECTIONS ── */
 .sec { padding: 72px 20px; }
@@ -291,43 +313,95 @@ body {
 
 /* transition */
 .transition-block {
-    background: linear-gradient(135deg, #1A1A2E, #2D3561);
-    padding: 52px 20px;
+    background: linear-gradient(135deg, #0F1225 0%, #1E2456 50%, #0F1225 100%);
+    padding: 70px 20px;
     text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+.transition-block::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(ellipse at 20% 50%, rgba(255,179,0,.08) 0%, transparent 60%),
+        radial-gradient(ellipse at 80% 50%, rgba(198,40,40,.1) 0%, transparent 60%);
+    pointer-events: none;
+}
+.transition-block-inner {
+    position: relative;
+    max-width: 720px;
+    margin: 0 auto;
+}
+.transition-block-icon {
+    font-size: 40px;
+    margin-bottom: 20px;
+    display: block;
 }
 .transition-block p {
     font-family: 'Montserrat', sans-serif;
     font-weight: 800;
-    font-size: clamp(18px, 3vw, 28px);
+    font-size: clamp(22px, 3.5vw, 36px);
     color: #fff;
-    max-width: 680px;
-    margin: 0 auto;
-    line-height: 1.45;
+    line-height: 1.4;
 }
 .transition-block span { color: #FFB300; }
+.transition-block-line {
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, #FFB300, #C62828);
+    border-radius: 2px;
+    margin: 24px auto 0;
+}
 
 /* ── DOBRA 3 — URGENCY MID ── */
 .urgency-mid {
-    background: #C62828;
-    padding: 22px 20px;
+    background: linear-gradient(135deg, #B71C1C 0%, #C62828 50%, #B71C1C 100%);
+    padding: 28px 20px;
     text-align: center;
+    position: relative;
+    overflow: hidden;
 }
-.urgency-mid p {
+.urgency-mid::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 20px,
+        rgba(255,255,255,.03) 20px,
+        rgba(255,255,255,.03) 40px
+    );
+    pointer-events: none;
+}
+.urgency-mid-inner {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.urgency-mid-text {
     font-family: 'Montserrat', sans-serif;
     font-weight: 800;
-    font-size: clamp(15px, 2.4vw, 21px);
+    font-size: clamp(15px, 2.4vw, 20px);
     color: #fff;
+    letter-spacing: .4px;
 }
 .urgency-mid .disc-badge {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
     background: #FFB300;
     color: #1A1A2E;
-    padding: 3px 12px;
-    border-radius: 4px;
+    padding: 6px 16px;
+    border-radius: 6px;
     font-size: 13px;
     font-weight: 900;
-    margin-left: 10px;
-    vertical-align: middle;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: .5px;
+    box-shadow: 0 2px 8px rgba(0,0,0,.2);
 }
 
 /* ── DOBRA 4 — BENEFITS ── */
