@@ -213,17 +213,17 @@ body {
 }
 .btn-red:hover { transform: translateY(-2px); }
 .btn-dark {
-    background: linear-gradient(135deg, #263238, #37474F);
-    color: #fff;
-    padding: 18px 36px;
+    background: transparent;
+    color: #555;
+    padding: 17px 36px;
     border-radius: 8px;
     font-size: 15px;
     text-transform: uppercase;
-    box-shadow: 0 6px 18px rgba(0,0,0,.25);
+    border: 2px solid #CCC;
     display: block;
     text-align: center;
 }
-.btn-dark:hover { transform: translateY(-2px); }
+.btn-dark:hover { border-color: #999; color: #333; transform: translateY(-2px); }
 
 .trust-row {
     display: flex;
@@ -593,7 +593,7 @@ body {
 }
 .plan-name { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 22px; color: #1A1A2E; margin-bottom: 14px; }
 .plan-price-old { font-size: 15px; color: #999; text-decoration: line-through; }
-.plan-price { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 50px; color: #E8531A; line-height: 1; }
+.plan-price { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 50px; color: #2E7D32; line-height: 1; }
 .plan-price sup { font-size: 20px; vertical-align: super; }
 .plan-price-note { color: #888; font-size: 12px; margin-top: 4px; }
 .plan-body { padding: 26px 22px; }
