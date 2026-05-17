@@ -545,11 +545,11 @@ body {
 .bonus-icon { font-size: 44px; margin-bottom: 14px; }
 .bonus-img {
     width: 100%;
-    aspect-ratio: 4/3;
+    aspect-ratio: 16/9;
     object-fit: cover;
-    border-radius: 10px;
+    border-radius: 8px;
     display: block;
-    margin-bottom: 16px;
+    margin-bottom: 14px;
 }
 .bonus-title { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 16px; color: #1A1A2E; margin-bottom: 10px; line-height: 1.3; }
 .bonus-desc { font-size: 13.5px; color: #666; line-height: 1.55; }
@@ -597,6 +597,7 @@ body {
 .plan-price sup { font-size: 20px; vertical-align: super; }
 .plan-price-note { color: #888; font-size: 12px; margin-top: 4px; }
 .plan-body { padding: 26px 22px; }
+.plan-body .btn { display: block; text-align: center; white-space: nowrap; }
 .plan-features { list-style: none; margin-bottom: 26px; }
 .plan-features li {
     display: flex;
