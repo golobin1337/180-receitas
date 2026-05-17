@@ -544,12 +544,12 @@ body {
 }
 .bonus-icon { font-size: 44px; margin-bottom: 14px; }
 .bonus-img {
-    width: 100%;
-    aspect-ratio: 16/9;
+    width: 128px;
+    height: 128px;
     object-fit: cover;
-    border-radius: 8px;
+    border-radius: 10px;
     display: block;
-    margin-bottom: 14px;
+    margin: 0 auto 14px;
 }
 .bonus-title { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 16px; color: #1A1A2E; margin-bottom: 10px; line-height: 1.3; }
 .bonus-desc { font-size: 13.5px; color: #666; line-height: 1.55; }
