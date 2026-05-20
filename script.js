@@ -1,3 +1,17 @@
+function redirectWithParams(destination) {
+    const currentParams = window.location.search;
+    if (!currentParams) {
+        window.location.href = destination;
+        return;
+    }
+
+    if (destination.includes("?")) {
+        window.location.href = destination + "&" + currentParams.substring(1);
+    } else {
+        window.location.href = destination + currentParams;
+    }
+}
+
 function toggleFaq(btn) {
     const answer = btn.nextElementSibling;
     const isOpen = answer.classList.contains('open');
