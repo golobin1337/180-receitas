@@ -20,3 +20,15 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
         }
     });
 });
+
+const stickyCta = document.getElementById('sticky-cta');
+const hero = document.querySelector('.hero');
+const pricing = document.getElementById('comprar');
+if (stickyCta && hero) {
+    const onScroll = () => {
+        const heroGone = hero.getBoundingClientRect().bottom < 0;
+        const pricingVisible = pricing && pricing.getBoundingClientRect().top < window.innerHeight;
+        stickyCta.classList.toggle('visible', heroGone && !pricingVisible);
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+}
