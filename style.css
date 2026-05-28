@@ -623,7 +623,7 @@ body {
     color: #444;
 }
 .plan-features li:last-child { border-bottom: none; }
-.plan-features li.disabled { color: #CCC; }
+.plan-features li.disabled { color: #CCC; text-decoration: line-through; }
 .chk  { color: #2E7D32; font-weight: 700; font-size: 16px; flex-shrink: 0; }
 .nope { color: #CCC; font-size: 16px; flex-shrink: 0; }
 .plan-note { text-align: center; font-size: 12px; color: #AAA; margin-top: 10px; }
