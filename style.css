@@ -611,7 +611,7 @@ body {
 .plan-card.featured .plan-price-note { color: rgba(255,255,255,.75); }
 .gift { font-size: 15px; flex-shrink: 0; }
 .plan-body { padding: 26px 22px; }
-.plan-body .btn { display: block; text-align: center; white-space: nowrap; }
+.plan-body .btn { display: block; text-align: center; white-space: normal; }
 .plan-features { list-style: none; margin-bottom: 26px; }
 .plan-features li {
     display: flex;
