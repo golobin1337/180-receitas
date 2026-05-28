@@ -574,8 +574,16 @@ body {
     border: 2px solid #2E7D32;
     box-shadow: 0 12px 48px rgba(46,125,50,.22);
 }
+.plan-card-outer {
+    position: relative;
+    padding-top: 16px;
+}
 .plan-badge {
-    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
     background: #FF6F00;
     color: #fff;
     font-family: 'Montserrat', sans-serif;
@@ -585,8 +593,8 @@ body {
     text-transform: uppercase;
     padding: 5px 14px;
     border-radius: 20px;
-    margin-bottom: 14px;
     box-shadow: 0 3px 10px rgba(0,0,0,.2);
+    z-index: 1;
 }
 .plan-header {
     background: #FFF8F2;
