@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Última Chance — 100 Receitas em Vídeo</title>
+    <title>Última Chance — Oferta Especial</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
@@ -43,163 +43,141 @@
         *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
-            font-family: 'Open Sans', sans-serif;
-            background: #F5F5F5;
-            color: #333;
+            font-family: 'Montserrat', sans-serif;
+            background: #000;
+            color: #fff;
             min-height: 100vh;
             display: flex;
+            flex-direction: column;
+            align-items: center;
             justify-content: center;
-            align-items: flex-start;
+            padding: 20px 16px 40px;
         }
 
-        .page {
+        /* ── COPY TOPO ── */
+        .ds-top {
             width: 100%;
-            max-width: 480px;
-            background: #fff;
-            min-height: 100vh;
-        }
-
-        /* ── HERO IMAGE ── */
-        .ds-img-block {
-            background: #FFF8F2;
-            padding: 28px 24px 0;
+            max-width: 600px;
             text-align: center;
+            margin-bottom: 20px;
         }
 
-        .ds-img-block img {
-            width: 100%;
-            max-width: 380px;
-            border-radius: 12px;
-            display: block;
-            margin: 0 auto;
-        }
-
-        /* ── COPY BLOCK ── */
-        .ds-copy-block {
-            padding: 28px 24px 24px;
-            text-align: center;
-            border-bottom: 1px solid #F0F0F0;
+        .ds-badge {
+            display: inline-block;
+            background: #FF8C00;
+            color: #000;
+            font-weight: 900;
+            font-size: 11px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            padding: 5px 14px;
+            border-radius: 20px;
+            margin-bottom: 14px;
         }
 
         .ds-headline {
-            font-family: 'Open Sans', sans-serif;
-            font-size: clamp(15px, 4vw, 17px);
-            color: #333;
+            font-size: clamp(15px, 4vw, 18px);
+            font-weight: 700;
+            color: #fff;
             line-height: 1.6;
-            margin-bottom: 14px;
         }
 
-        .ds-headline strong { font-weight: 700; }
-        .ds-headline .hl-green {
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 900;
-            color: #2E7D32;
-            font-size: clamp(17px, 4.5vw, 20px);
+        .ds-headline .hl { color: #FF8C00; }
+
+        /* ── VIDEO ── */
+        .video-wrap {
+            width: 100%;
+            max-width: 400px;
+            margin-bottom: 24px;
         }
 
-        .ds-sub {
+        /* ── COPY BAIXO ── */
+        .ds-copy {
+            width: 100%;
+            max-width: 600px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .ds-copy p {
             font-size: clamp(13px, 3.5vw, 15px);
-            color: #555;
+            font-weight: 600;
+            color: rgba(255,255,255,.85);
             line-height: 1.6;
-            margin-bottom: 22px;
+            margin-bottom: 16px;
         }
 
-        /* ── PRICE ── */
-        .ds-price-line {
-            font-family: 'Montserrat', sans-serif;
+        .ds-price {
             font-size: clamp(16px, 4.5vw, 20px);
-            color: #333;
+            font-weight: 700;
+            color: #fff;
             margin-bottom: 6px;
         }
 
-        .ds-price-line s {
-            color: #999;
-            font-weight: 600;
-        }
+        .ds-price s { color: #888; font-weight: 400; }
+        .ds-price .price-new { color: #4CAF50; font-weight: 900; font-size: 1.2em; }
 
-        .ds-price-big {
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 900;
-            font-size: clamp(18px, 5vw, 22px);
-            color: #2E7D32;
-        }
-
-        /* ── INSTRUCTION ── */
-        .ds-instruction {
-            margin: 22px 0 0;
-            background: #E8F5E9;
-            border: 2px solid #2E7D32;
-            border-radius: 8px;
-            padding: 14px 16px;
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 800;
+        .scarcity {
             font-size: clamp(13px, 3.5vw, 15px);
-            color: #1B5E20;
-            line-height: 1.5;
-            text-align: center;
+            font-weight: 800;
+            color: #FF8C00;
+            margin-bottom: 0;
         }
 
         /* ── CTA ── */
-        .ds-cta-block {
-            padding: 24px 20px 32px;
+        .cta-wrap {
+            width: 100%;
+            max-width: 960px;
             text-align: center;
         }
 
-        .ds-btn-accept {
-            display: block;
+        .btn-accept {
+            display: flex;
+            align-items: center;
+            justify-content: center;
             width: 100%;
-            background: linear-gradient(135deg, #2E7D32, #43A047);
+            background: #4CAF50;
             color: #fff;
             font-family: 'Montserrat', sans-serif;
             font-weight: 900;
-            font-size: clamp(15px, 4vw, 17px);
+            font-size: clamp(15px, 4vw, 20px);
+            letter-spacing: 1px;
             text-transform: uppercase;
-            letter-spacing: .5px;
-            padding: 20px 24px;
-            border-radius: 10px;
+            padding: 22px 32px;
+            border-radius: 8px;
             border: none;
             cursor: pointer;
             text-decoration: none;
-            box-shadow: 0 8px 28px rgba(46,125,50,.45);
-            animation: btn-pulse 1.9s ease-in-out infinite;
-            margin-bottom: 14px;
+            margin-bottom: 12px;
+            transition: background .2s;
         }
 
-        @keyframes btn-pulse {
-            0%,100% { transform: scale(1);    box-shadow: 0 8px 28px rgba(46,125,50,.45); }
-            50%      { transform: scale(1.02); box-shadow: 0 12px 36px rgba(46,125,50,.6); }
-        }
+        .btn-accept:hover { background: #43A047; }
 
-        .ds-btn-accept:hover { animation: none; transform: scale(1.02); }
-
-        .ds-btn-decline {
+        .btn-decline {
             display: block;
             width: 100%;
-            background: #E53935;
+            background: #C62828;
             color: #fff;
             font-family: 'Montserrat', sans-serif;
             font-weight: 700;
             font-size: clamp(13px, 3.5vw, 14px);
             padding: 16px 24px;
-            border-radius: 10px;
+            border-radius: 8px;
             border: none;
             cursor: pointer;
             text-decoration: none;
             margin-bottom: 20px;
             opacity: .85;
+            transition: opacity .2s;
         }
 
-        .ds-btn-decline:hover { opacity: 1; }
+        .btn-decline:hover { opacity: 1; }
 
         .ds-trust {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 6px;
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 700;
             font-size: 11px;
-            color: #888;
+            color: #666;
+            font-weight: 600;
             letter-spacing: .5px;
             text-transform: uppercase;
         }
@@ -207,50 +185,46 @@
 </head>
 <body>
 
-<div class="page">
+    <!-- TOPO -->
+    <div class="ds-top">
+        <div class="ds-badge">⚠️ ÚLTIMA CHANCE</div>
+        <p class="ds-headline">
+            Espera! Antes de sair, <span class="hl">preparamos uma oferta especial<br>só para você.</span>
+        </p>
+    </div>
 
-    <!-- IMAGEM -->
-    <div class="ds-img-block">
-        <img src="public/heroupsell.jpg" alt="100 Receitas em Vídeo Passo a Passo">
+    <!-- VIDEO -->
+    <div class="video-wrap">
+        <vturb-smartplayer id="vid-6a22087ae810778a42833f80" style="display: block; margin: 0 auto; width: 100%; max-width: 400px;"></vturb-smartplayer>
+        <script type="text/javascript">
+        var s=document.createElement("script");
+        s.src="https://scripts.converteai.net/7077694b-d41d-4586-abe2-54253b1f5552/players/6a22087ae810778a42833f80/v4/player.js",
+        s.async=!0,document.head.appendChild(s);
+        </script>
     </div>
 
     <!-- COPY -->
-    <div class="ds-copy-block">
-        <p class="ds-headline">
-            Tudo bem, eu entendo. Mas antes de você ir,<br>
-            <strong>quero te dar</strong> <span class="hl-green">R$5,00 de desconto</span><br>
-            porque acho que você merece!
-        </p>
-
-        <p class="ds-sub">
-            Não quero que você perca a chance de ver cada receita sendo feita do início ao fim. Essa é a última vez que essa oferta vai aparecer pra você.
-        </p>
-
-        <p class="ds-price-line">
-            De <s>R$19,90</s> por apenas <span class="ds-price-big">R$14,90!</span>
-        </p>
-
-        <div class="ds-instruction">
-            Clique no botão verde abaixo e garanta os<br>
-            +100 vídeos passo a passo por R$14,90!
-        </div>
+    <div class="ds-copy">
+        <p>As primeiras 30 pessoas que garantirem acesso agora, ganharão um exemplar físico do Protocolo Imediato.</p>
+        <p class="ds-price">De <s>R$19,90</s> por apenas <span class="price-new">R$14,90</span></p>
+        <p class="scarcity">ainda restam 3 unidades</p>
     </div>
 
     <!-- CTA -->
-    <div class="ds-cta-block">
+    <div class="cta-wrap">
         <a href="javascript:void(0)"
            onclick="redirectWithParams('https://mundoconhecimento.mycartpanda.com/checkout/182879391:1')"
-           class="ds-btn-accept">
-            Sim, eu aceito essa oferta especial!
+           class="btn-accept">
+            QUERO GARANTIR MINHA VAGA
         </a>
-        <button class="ds-btn-decline"
+        <button class="btn-decline"
                 onclick="redirectWithParams('#')">
             Não, eu gostaria de recusar essa oferta
         </button>
         <div class="ds-trust">🔒 Compra 100% Segura e Garantida</div>
     </div>
 
-</div>
+</body>
 
 <script>
 function redirectWithParams(destination) {
@@ -266,6 +240,4 @@ function redirectWithParams(destination) {
     }
 }
 </script>
-
-</body>
 </html>
