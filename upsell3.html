@@ -194,15 +194,12 @@
 <body>
 
     <!-- VIDEO -->
-    <div class="video-wrap" id="videoWrap">
-        <img class="thumb" src="public/heroupsell.jpg" alt="100 Receitas em Vídeo Passo a Passo" id="thumb">
-        <div class="play-overlay" id="playOverlay">
-            <div class="play-icon">
-                <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-            </div>
-        </div>
-        <div class="video-progress" id="videoProgress"></div>
-    </div>
+    <vturb-smartplayer id="vid-6a22087ae810778a42833f80" style="display: block; margin: 0 auto; width: 100%; max-width: 400px;"></vturb-smartplayer>
+    <script type="text/javascript">
+    var s=document.createElement("script");
+    s.src="https://scripts.converteai.net/7077694b-d41d-4586-abe2-54253b1f5552/players/6a22087ae810778a42833f80/v4/player.js",
+    s.async=!0,document.head.appendChild(s);
+    </script>
 
     <!-- COPY -->
     <div class="copy-block">
@@ -247,23 +244,18 @@ function handleCta() {
 
 // Unlock button after simulated video time
 let seconds = 15;
-const btnHint     = document.getElementById('btnHint');
-const ctaBtn      = document.getElementById('ctaBtn');
-const iconLock    = document.getElementById('iconLock');
-const progressBar = document.getElementById('videoProgress');
+const btnHint  = document.getElementById('btnHint');
+const ctaBtn   = document.getElementById('ctaBtn');
+const iconLock = document.getElementById('iconLock');
 
 const timer = setInterval(function() {
     seconds--;
-    progressBar.style.width = ((15 - seconds) / 15 * 100) + '%';
 
     if (seconds <= 0) {
         clearInterval(timer);
-        // unlock button
         ctaBtn.classList.remove('locked');
         btnHint.classList.add('hidden');
-        // swap lock icon for arrow
         iconLock.innerHTML = '<path d="M8 5v14l11-7z"/>';
-        progressBar.style.width = '100%';
     }
 }, 1000);
 </script>
