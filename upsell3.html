@@ -206,8 +206,8 @@
 
     <!-- COPY -->
     <div class="copy-block">
-        <p class="copy-main">Garanta agora acesso às <strong>+100 Receitas de Carne Moída em Vídeo</strong> passo a passo e nunca mais fique travado no meio de uma receita.</p>
-        <p class="scarcity" id="scarcityText">ainda restam <span id="unitsLeft">7</span> vagas com esse preço</p>
+        <p class="copy-main">As primeiras 30 pessoas que garantirem acesso agora, ganharão um exemplar físico do Protocolo Imediato.</p>
+        <p class="scarcity" id="scarcityText">ainda restam <span id="unitsLeft">3</span> unidades</p>
     </div>
 
     <!-- CTA -->
@@ -220,7 +220,7 @@
             <svg id="iconLock" viewBox="0 0 24 24"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg>
             <span id="btnText">QUERO GARANTIR MINHA VAGA</span>
         </a>
-        <p class="btn-hint" id="btnHint">O botão será liberado em <span id="countdown">15</span>s</p>
+        <p class="btn-hint" id="btnHint">O botão será liberado após o vídeo</p>
     </div>
 
 </body>
@@ -245,9 +245,8 @@ function handleCta() {
     redirectWithParams('https://mundoconhecimento.mycartpanda.com/checkout/182879391:1');
 }
 
-// Countdown to unlock button
+// Unlock button after simulated video time
 let seconds = 15;
-const countdownEl = document.getElementById('countdown');
 const btnHint     = document.getElementById('btnHint');
 const ctaBtn      = document.getElementById('ctaBtn');
 const iconLock    = document.getElementById('iconLock');
@@ -255,8 +254,6 @@ const progressBar = document.getElementById('videoProgress');
 
 const timer = setInterval(function() {
     seconds--;
-    countdownEl.textContent = seconds;
-    // update progress bar
     progressBar.style.width = ((15 - seconds) / 15 * 100) + '%';
 
     if (seconds <= 0) {
