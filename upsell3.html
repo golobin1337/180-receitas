@@ -189,6 +189,23 @@
         }
 
         .btn-hint.hidden { display: none; }
+
+        .btn-decline {
+            display: none;
+            background: none;
+            border: none;
+            color: #666;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 12px;
+            font-weight: 600;
+            text-decoration: underline;
+            cursor: pointer;
+            margin-top: 10px;
+            padding: 8px;
+        }
+
+        .btn-decline.visible { display: block; }
+        .btn-decline:hover { color: #999; }
     </style>
 </head>
 <body>
@@ -215,6 +232,10 @@
            onclick="handleCta()">
             <span id="btnText">QUERO GARANTIR MINHA VAGA</span>
         </a>
+        <button class="btn-decline" id="btnDecline"
+                onclick="redirectWithParams('downsell.html')">
+            Não quero, prefiro pagar mais caro depois
+        </button>
     </div>
 
 </body>
@@ -236,5 +257,9 @@ function redirectWithParams(destination) {
 function handleCta() {
     redirectWithParams('https://mundoconhecimento.mycartpanda.com/checkout/182879391:1');
 }
+
+setTimeout(function() {
+    document.getElementById('btnDecline').classList.add('visible');
+}, 5000);
 </script>
 </html>
