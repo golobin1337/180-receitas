@@ -42,6 +42,22 @@
     <style>
         *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
+        .top-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: #FF8C00;
+            color: #000;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            font-size: clamp(11px, 3vw, 13px);
+            text-align: center;
+            padding: 8px 16px;
+            z-index: 999;
+            letter-spacing: .3px;
+        }
+
         body {
             font-family: 'Montserrat', sans-serif;
             background: #000;
@@ -51,7 +67,7 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            padding: 20px 16px 40px;
+            padding: 56px 16px 40px;
         }
 
         /* ── VIDEO ── */
@@ -214,12 +230,13 @@
 </head>
 <body>
 
+    <div class="top-bar">Aguarde — seu acesso está sendo liberado. Não feche essa página.</div>
+
     <!-- VIDEO -->
     <iframe id="panda-e03f7c55-e1c8-4efd-8e71-3e816af6c840" src="https://player-vz-681c54dc-4ba.tv.pandavideo.com.br/embed/?v=e03f7c55-e1c8-4efd-8e71-3e816af6c840" style="border:none; display:block; margin:0 auto; width:100%; max-width:400px; aspect-ratio:9/16;" allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture" allowfullscreen="true" fetchpriority="high"></iframe>
 
     <!-- COPY -->
     <div class="copy-block">
-        <p class="copy-main">As primeiras 30 pessoas que garantirem acesso agora, ganharão um exemplar físico do Protocolo Imediato.</p>
         <p class="scarcity" id="scarcityText">ainda restam <span id="unitsLeft">3</span> unidades</p>
     </div>
 
@@ -229,11 +246,11 @@
            id="ctaBtn"
            class="btn-cta"
            onclick="handleCta()">
-            <span id="btnText">QUERO GARANTIR MINHA VAGA</span>
+            <span id="btnText">Sim! Quero acertar minhas receitas de primeira</span>
         </a>
         <button class="btn-decline" id="btnDecline"
                 onclick="redirectWithParams('downsell.html')">
-            Não quero, prefiro pagar mais caro depois
+            Não quero, prefiro tentar sozinha
         </button>
     </div>
 

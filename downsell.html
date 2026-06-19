@@ -42,6 +42,22 @@
     <style>
         *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
+        .top-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: #FF8C00;
+            color: #000;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            font-size: clamp(11px, 3vw, 13px);
+            text-align: center;
+            padding: 8px 16px;
+            z-index: 999;
+            letter-spacing: .3px;
+        }
+
         body {
             font-family: 'Montserrat', sans-serif;
             background: #000;
@@ -51,7 +67,7 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            padding: 20px 16px 40px;
+            padding: 56px 16px 40px;
         }
 
         /* ── COPY TOPO ── */
@@ -197,6 +213,8 @@
 </head>
 <body>
 
+    <div class="top-bar">Aguarde — seu acesso está sendo liberado. Não feche essa página.</div>
+
     <!-- TOPO -->
     <div class="ds-top">
         <p class="ds-headline">
@@ -212,10 +230,10 @@
     <!-- COPY -->
     <div class="ds-copy">
         <p>Eu não quero que você perca essa oportunidade. Essa pode ser a sua última chance de garantir o acesso com esse desconto especial!</p>
-        <p class="ds-price">De <s>R$27,00</s> por apenas <span class="price-new">R$17,00!</span></p>
+        <p class="ds-price">De <s>R$25,00</s> por apenas <span class="price-new">R$15,00!</span></p>
         <p class="scarcity">ainda restam 3 unidades</p>
         <div class="ds-instruction">
-            Clique no botão verde abaixo e garanta o acesso ao Protocolo Imediato com desconto especial agora!
+            Clique no botão verde abaixo e garanta com desconto especial agora!
         </div>
     </div>
 
