@@ -225,6 +225,23 @@
 
         .btn-decline.visible { display: block; }
         .btn-decline:hover { color: #E0E0E0; }
+
+        /* ── REVEAL ON 75% ── */
+        .copy-block,
+        .cta-wrap {
+            display: none;
+        }
+
+        .copy-block.revealed,
+        .cta-wrap.revealed {
+            display: block;
+            animation: fadeInUp .5s ease forwards;
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(16px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
     </style>
 </head>
 <body>
@@ -273,8 +290,40 @@ function handleCta() {
     redirectWithParams('https://mundoconhecimento.mycartpanda.com/checkout/182879391:1');
 }
 
-setTimeout(function() {
-    document.getElementById('btnDecline').classList.add('visible');
-}, 5000);
+var contentRevealed = false;
+
+function revealContent() {
+    if (contentRevealed) return;
+    contentRevealed = true;
+    document.querySelector('.copy-block').classList.add('revealed');
+    document.querySelector('.cta-wrap').classList.add('revealed');
+    setTimeout(function() {
+        document.getElementById('btnDecline').classList.add('visible');
+    }, 5000);
+}
+
+// Escuta eventos do Panda Video via postMessage
+window.addEventListener('message', function(e) {
+    try {
+        var data = typeof e.data === 'string' ? JSON.parse(e.data) : e.data;
+        if (!data) return;
+        var percent = null;
+        if (data.percentWatched !== undefined) {
+            percent = data.percentWatched / 100;
+        } else if ((data.event === 'timeupdate' || data.type === 'timeupdate') &&
+                   (data.currentTime || data.videoCurrentTime) &&
+                   (data.duration || data.videoDuration)) {
+            var ct = data.currentTime || data.videoCurrentTime;
+            var dur = data.duration || data.videoDuration;
+            percent = ct / dur;
+        }
+        if (percent !== null && percent >= 0.75) {
+            revealContent();
+        }
+    } catch(err) {}
+});
+
+// Fallback: revela após 5 minutos caso a API não dispare
+setTimeout(revealContent, 300000);
 </script>
 </html>
