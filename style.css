@@ -722,13 +722,11 @@ body {
 .offer-item {
     display: flex;
     align-items: flex-start;
-    justify-content: space-between;
     gap: 10px;
     padding: 9px 0;
     border-bottom: 1px solid rgba(255,255,255,.07);
 }
 .offer-item:last-child { border-bottom: none; }
-.offer-item-left { display: flex; align-items: flex-start; gap: 9px; flex: 1; min-width: 0; }
 .offer-item-icon {
     width: 30px; height: 30px;
     border-radius: 50%;
