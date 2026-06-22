@@ -303,27 +303,22 @@ function revealContent() {
 }
 
 // Escuta eventos do Panda Video via postMessage
+// Revela após 2min50s (170s) assistidos
 window.addEventListener('message', function(e) {
     try {
         var data = typeof e.data === 'string' ? JSON.parse(e.data) : e.data;
         if (!data) return;
-        var percent = null;
-        if (data.percentWatched !== undefined) {
-            percent = data.percentWatched / 100;
-        } else if ((data.event === 'timeupdate' || data.type === 'timeupdate') &&
-                   (data.currentTime || data.videoCurrentTime) &&
-                   (data.duration || data.videoDuration)) {
-            var ct = data.currentTime || data.videoCurrentTime;
-            var dur = data.duration || data.videoDuration;
-            percent = ct / dur;
+        var ct = null;
+        if (data.event === 'timeupdate' || data.type === 'timeupdate') {
+            ct = data.currentTime || data.videoCurrentTime || null;
         }
-        if (percent !== null && percent >= 0.75) {
+        if (ct !== null && ct >= 170) {
             revealContent();
         }
     } catch(err) {}
 });
 
-// Fallback: revela após 5 minutos caso a API não dispare
-setTimeout(revealContent, 300000);
+// Fallback: revela após 3 minutos caso a API não dispare
+setTimeout(revealContent, 180000);
 </script>
 </html>
