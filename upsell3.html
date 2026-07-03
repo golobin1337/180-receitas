@@ -70,174 +70,145 @@
             padding: 56px 16px 40px;
         }
 
-        /* ── VIDEO ── */
-        .video-wrap {
-            position: relative;
-            width: 100%;
-            max-width: 360px;
-            aspect-ratio: 9/16;
-            background: #111;
-            border-radius: 8px;
-            overflow: hidden;
-            cursor: pointer;
-            margin-bottom: 24px;
-        }
-
-        .video-wrap video,
-        .video-wrap img.thumb {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-        }
-
-        .play-overlay {
-            position: absolute;
-            inset: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: rgba(0,0,0,.25);
-            transition: opacity .2s;
-        }
-
-        .play-overlay.hidden { display: none; }
-
-        .play-icon {
-            width: 72px;
-            height: 72px;
-            background: #4CAF50;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 4px 24px rgba(76,175,80,.6);
-        }
-
-        .play-icon svg {
-            width: 30px;
-            height: 30px;
-            fill: #fff;
-            margin-left: 4px;
-        }
-
-        /* Progress bar */
-        .video-progress {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            height: 4px;
-            width: 0%;
-            background: #4CAF50;
-            transition: width .5s linear;
-        }
-
-        /* ── COPY ── */
+        /* ── COPY CARD ── */
         .copy-block {
             width: 100%;
-            max-width: 600px;
+            max-width: 520px;
+            background: #fff;
+            color: #333;
+            border-radius: 16px 16px 0 0;
+            padding: 28px 20px 16px;
+            margin-top: 20px;
+            text-align: left;
+        }
+
+        .copy-headline {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            font-size: clamp(17px, 4.5vw, 21px);
+            color: #1A1A2E;
+            line-height: 1.45;
             text-align: center;
-            margin-top: 24px;
             margin-bottom: 20px;
         }
+        .copy-headline u { color: #C62828; text-decoration-color: #C62828; }
+        .copy-headline .hl-price { color: #2E7D32; }
 
-        .copy-main {
-            font-size: clamp(13px, 3.5vw, 16px);
-            font-weight: 700;
-            color: #fff;
-            line-height: 1.6;
-            margin-bottom: 8px;
+        .copy-you-receive {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 900;
+            font-size: 13px;
+            color: #1A1A2E;
+            letter-spacing: .5px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            border-left: 4px solid #2E7D32;
+            padding-left: 10px;
         }
 
-        .scarcity {
-            font-size: clamp(13px, 3.5vw, 15px);
-            font-weight: 800;
-            color: #FF8C00;
+        .copy-items { list-style: none; margin-bottom: 18px; }
+        .copy-items li {
+            display: flex;
+            align-items: flex-start;
+            gap: 9px;
+            font-size: 13.5px;
+            color: #333;
+            line-height: 1.5;
+            padding: 7px 0;
+            border-bottom: 1px solid #F0F0F0;
+            font-family: 'Open Sans', sans-serif;
         }
+        .copy-items li:last-child { border-bottom: none; }
+        .copy-items .item-icon { flex-shrink: 0; font-size: 16px; margin-top: 1px; }
+        .copy-items .item-text strong { font-family: 'Montserrat', sans-serif; color: #1A1A2E; }
 
-        /* ── BUTTON ── */
+        .copy-price-box {
+            background: #F4FFF4;
+            border: 2px solid #C8E6C9;
+            border-radius: 12px;
+            padding: 16px;
+            text-align: center;
+        }
+        .copy-price-old { font-size: 14px; color: #999; text-decoration: line-through; margin-bottom: 4px; }
+        .copy-price-new {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 900;
+            font-size: clamp(20px, 5vw, 26px);
+            color: #2E7D32;
+            margin-bottom: 6px;
+        }
+        .copy-price-note { font-size: 12px; color: #666; margin-bottom: 8px; line-height: 1.6; }
+        .copy-trust { font-size: 12px; color: #555; font-weight: 600; }
+
+        /* ── CTA ── */
         .cta-wrap {
             width: 100%;
-            max-width: 960px;
+            max-width: 520px;
+            background: #fff;
+            padding: 18px 20px 24px;
+            border-radius: 0 0 16px 16px;
             text-align: center;
         }
 
         .btn-cta {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
+            display: block;
             width: 100%;
-            background: #4CAF50;
+            background: #2E7D32;
             color: #fff;
             font-family: 'Montserrat', sans-serif;
             font-weight: 900;
-            font-size: clamp(15px, 4vw, 20px);
-            letter-spacing: 1px;
+            font-size: clamp(13px, 3.5vw, 16px);
             text-transform: uppercase;
-            padding: 22px 32px;
+            letter-spacing: .4px;
+            padding: 20px 20px;
             border-radius: 8px;
             border: none;
             cursor: pointer;
             text-decoration: none;
-            transition: background .2s, opacity .2s;
-            margin-bottom: 10px;
+            margin-bottom: 14px;
+            line-height: 1.4;
+            box-shadow: 0 6px 20px rgba(46,125,50,.4);
+            animation: cta-pulse 2s ease-in-out infinite;
         }
-
-        .btn-cta.locked {
-            background: #2a5c2b;
-            cursor: not-allowed;
-            opacity: .75;
+        @keyframes cta-pulse {
+            0%,100% { transform: scale(1);    box-shadow: 0 6px 20px rgba(46,125,50,.4); }
+            50%      { transform: scale(1.02); box-shadow: 0 10px 28px rgba(46,125,50,.55); }
         }
-
-        .btn-cta:not(.locked):hover { background: #43A047; }
-
-        .btn-cta svg {
-            width: 22px;
-            height: 22px;
-            fill: #fff;
-            flex-shrink: 0;
-        }
-
-        .btn-hint {
-            font-size: 13px;
-            color: #FF8C00;
-            font-weight: 600;
-        }
-
-        .btn-hint.hidden { display: none; }
+        .btn-cta:hover { animation: none; background: #388E3C; }
 
         .btn-decline {
             display: none;
             background: none;
             border: none;
-            color: #BDBDBD;
+            color: #888;
             font-family: 'Montserrat', sans-serif;
             font-size: 12px;
             font-weight: 600;
             text-decoration: underline;
             cursor: pointer;
-            margin-top: 10px;
-            padding: 8px;
+            padding: 6px 8px;
             width: 100%;
             text-align: center;
+            line-height: 1.5;
+            margin-bottom: 14px;
         }
-
         .btn-decline.visible { display: block; }
-        .btn-decline:hover { color: #E0E0E0; }
+        .btn-decline:hover { color: #444; }
 
-        /* ── REVEAL ON 75% ── */
-        .copy-block,
-        .cta-wrap {
-            display: none;
+        .copy-footer {
+            font-size: 11px;
+            color: #aaa;
+            line-height: 1.6;
+            padding-top: 12px;
+            border-top: 1px solid #F0F0F0;
         }
 
-        .copy-block.revealed,
-        .cta-wrap.revealed {
+        /* ── REVEAL após 2min50s ── */
+        .copy-block, .cta-wrap { display: none; }
+        .copy-block.revealed, .cta-wrap.revealed {
             display: block;
             animation: fadeInUp .5s ease forwards;
         }
-
         @keyframes fadeInUp {
             from { opacity: 0; transform: translateY(16px); }
             to   { opacity: 1; transform: translateY(0); }
@@ -253,7 +224,35 @@
 
     <!-- COPY -->
     <div class="copy-block">
-        <p class="scarcity" id="scarcityText">ainda restam <span id="unitsLeft">3</span> unidades</p>
+        <h2 class="copy-headline">Apenas <u>AQUI E AGORA</u>, por apenas <span class="hl-price">R$24,90!</span> Oferta exclusiva para quem acabou de garantir as receitas de carne moída.</h2>
+
+        <div class="copy-you-receive">📦 Você recebe:</div>
+
+        <ul class="copy-items">
+            <li>
+                <span class="item-icon">🎬</span>
+                <span class="item-text"><strong>Cozinha em Prática</strong> — Vídeos curtos de passo a passo de cada receita — veja sendo feito e acerte de primeira, sem tentativa e erro.</span>
+            </li>
+            <li><span class="item-icon">🎁</span><span class="item-text">35 Receitas com Frango</span></li>
+            <li><span class="item-icon">🎁</span><span class="item-text">35 Receitas com Ovo</span></li>
+            <li><span class="item-icon">🎁</span><span class="item-text">35 Receitas de Macarrão</span></li>
+            <li><span class="item-icon">🎁</span><span class="item-text">35 Receitas com Presunto e Queijo</span></li>
+            <li><span class="item-icon">🎁</span><span class="item-text">35 Receitas com Batata</span></li>
+            <li><span class="item-icon">🎁</span><span class="item-text">35 Receitas com Atum</span></li>
+            <li><span class="item-icon">🎁</span><span class="item-text">35 Receitas com Arroz</span></li>
+            <li><span class="item-icon">🎁</span><span class="item-text">35 Receitas com Banana</span></li>
+            <li>
+                <span class="item-icon">🎁</span>
+                <span class="item-text"><strong>Atualizações Vitalícias</strong> — Toda receita nova que sair entra direto no seu acesso — sem pagar nada extra, para sempre.</span>
+            </li>
+        </ul>
+
+        <div class="copy-price-box">
+            <div class="copy-price-old">De R$97,00</div>
+            <div class="copy-price-new">Por apenas R$24,90</div>
+            <div class="copy-price-note">Pagamento único · Acesso imediato · Sem mensalidade</div>
+            <div class="copy-trust">🔒 Pagamento 100% seguro · ✅ 30 dias de garantia incondicional</div>
+        </div>
     </div>
 
     <!-- CTA -->
@@ -262,12 +261,13 @@
            id="ctaBtn"
            class="btn-cta"
            onclick="handleCta()">
-            <span id="btnText">Quero garantir meu acesso por R$25,00</span>
+            Sim! Quero o Cozinha em Prática + todos os bônus por R$24,90 →
         </a>
         <button class="btn-decline" id="btnDecline"
                 onclick="redirectWithParams('downsell.html')">
-            Não quero, prefiro tentar sozinha
+            Não, prefiro 280 receitas de bônus e arriscar errar sozinha
         </button>
+        <p class="copy-footer">Essa oferta existe única e exclusivamente nessa página. Ao clicar no link acima, você confirma que não quer garantir o acesso e os bônus por R$24,90.</p>
     </div>
 
 </body>
