@@ -42,7 +42,9 @@ if (stickyCta && hero) {
     const onScroll = () => {
         const heroGone = hero.getBoundingClientRect().bottom < 0;
         const pricingVisible = pricing && pricing.getBoundingClientRect().top < window.innerHeight;
-        stickyCta.classList.toggle('visible', heroGone && !pricingVisible);
+        const show = heroGone && !pricingVisible;
+        stickyCta.classList.toggle('visible', show);
+        document.body.style.paddingBottom = show ? '72px' : '';
     };
     window.addEventListener('scroll', onScroll, { passive: true });
 }
