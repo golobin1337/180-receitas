@@ -493,12 +493,16 @@
                 </div>
 
                 <!-- HOTMART - Sales Funnel Widget -->
-                <div id="hotmart-sales-funnel"></div>
-                <script src="https://checkout.hotmart.com/lib/hotmart-checkout-elements.js"></script>
-                <script>
-                checkoutElements.init('salesFunnel').mount('#hotmart-sales-funnel')
-                </script>
-                <!-- HOTMART - Sales Funnel Widget -->
+<!--- sales funnel container --->
+<div id="hotmart-sales-funnel"></div>
+
+<!--- script load and setup --->
+<script src="https://checkout.hotmart.com/lib/hotmart-checkout-elements.js"></script>
+<script>
+checkoutElements.init('salesFunnel').mount('#hotmart-sales-funnel')
+</script>
+<!-- HOTMART - Sales Funnel Widget -->
+
 
                 <button class="btn-decline" onclick="redirectWithParams('#')">
                     Não, obrigado. Prefiro continuar a decidir sozinha, todos os dias, o que fazer com o que tenho em casa.
