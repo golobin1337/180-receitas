@@ -150,10 +150,13 @@
             </p>
 
             <div class="cta-wrap" id="cta-block">
-                <a href="#" class="cta-btn" onclick="redirectWithParams('#'); return false;">
-                    QUIERO ACCESO AHORA →
-                </a>
-                <span class="cta-security">🔒 Compra segura · Pago en tu moneda local</span>
+                <!-- HOTMART - Sales Funnel Widget -->
+                <div id="hotmart-sales-funnel"></div>
+                <script src="https://checkout.hotmart.com/lib/hotmart-checkout-elements.js"></script>
+                <script>
+                checkoutElements.init('salesFunnel').mount('#hotmart-sales-funnel')
+                </script>
+                <!-- HOTMART - Sales Funnel Widget -->
             </div>
 
         </div>
