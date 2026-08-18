@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Espera! Tu pedido aún no está completo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background: #F7F7F7;
+            color: #222;
+        }
+
+        /* ── TOP BAR ── */
+        .top-bar {
+            position: fixed;
+            top: 0; left: 0; width: 100%;
+            background: #B71C1C;
+            color: #fff;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            font-size: clamp(10px, 2.8vw, 13px);
+            text-align: center;
+            padding: 9px 16px;
+            z-index: 999;
+            letter-spacing: .3px;
+            line-height: 1.4;
+        }
+
+        /* ── LAYOUT ── */
+        .page-wrap {
+            padding-top: 56px;
+        }
+
+        .main {
+            max-width: 560px;
+            margin: 0 auto;
+            padding: 32px 20px 60px;
+            text-align: center;
+        }
+
+        /* ── HEADLINE ── */
+        .headline {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 900;
+            font-size: clamp(20px, 5.5vw, 28px);
+            color: #1A1A2E;
+            line-height: 1.3;
+            margin-bottom: 28px;
+        }
+
+        /* ── VIDEO ── */
+        .video-wrap {
+            width: 100%;
+            max-width: 400px;
+            margin: 0 auto 20px;
+        }
+
+        /* ── COPY ABAIXO DO VIDEO ── */
+        .video-copy {
+            font-size: clamp(14px, 3.5vw, 16px);
+            color: #555;
+            line-height: 1.7;
+            margin-bottom: 40px;
+            font-style: italic;
+        }
+
+        /* ── BOTÃO CTA ── */
+        .cta-wrap {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+            animation: fadeIn .6s ease;
+        }
+
+        .cta-wrap.visible {
+            display: flex;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(12px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        .cta-btn {
+            display: block;
+            width: 100%;
+            max-width: 420px;
+            background: linear-gradient(135deg, #2E7D32, #43A047);
+            color: #fff;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 900;
+            font-size: clamp(15px, 4vw, 18px);
+            text-align: center;
+            padding: 18px 24px;
+            border-radius: 50px;
+            border: none;
+            cursor: pointer;
+            letter-spacing: .5px;
+            box-shadow: 0 6px 20px rgba(46,125,50,.35);
+            text-decoration: none;
+            line-height: 1.3;
+        }
+
+        .cta-btn:hover {
+            background: linear-gradient(135deg, #1B5E20, #2E7D32);
+            box-shadow: 0 8px 24px rgba(46,125,50,.45);
+        }
+
+        .cta-security {
+            font-size: 12px;
+            color: #888;
+            font-family: 'Montserrat', sans-serif;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="top-bar">
+        ⚠️ No cierres esta página ni hagas clic en volver, esto puede generar un error en tu pedido. ⚠️
+    </div>
+
+    <div class="page-wrap">
+        <div class="main">
+
+            <h1 class="headline">
+                Tu pedido fue aprobado, pero aún no está completo.<br>
+                Mira el mensaje de abajo para liberar tu acceso.
+            </h1>
+
+            <div class="video-wrap">
+                <vturb-smartplayer id="vid-6a839bd7b89c02fbb6c7a31d" style="display: block; margin: 0 auto; width: 100%; max-width: 400px;"><div class="vturb-player-placeholder" style="position: relative; width: 100%; padding: 177.91666666666666% 0 0; z-index: 0; background-color: black;"></div></vturb-smartplayer>
+                <script type="text/javascript">
+                var s=document.createElement("script");
+                s.src="https://scripts.converteai.net/35664cc2-5784-4805-94f2-523cf400a138/players/6a839bd7b89c02fbb6c7a31d/v4/player.js",
+                s.async=!0,document.head.appendChild(s);
+                </script>
+            </div>
+
+            <p class="video-copy">
+                Haz esto ahora: mira el mensaje de arriba hasta el final.<br>
+                Tu enlace de acceso va a aparecer justo debajo.
+            </p>
+
+            <div class="cta-wrap" id="cta-block">
+                <a href="#" class="cta-btn" onclick="redirectWithParams('#'); return false;">
+                    QUIERO ACCESO AHORA →
+                </a>
+                <span class="cta-security">🔒 Compra segura · Pago en tu moneda local</span>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+    function redirectWithParams(destination) {
+        const currentParams = window.location.search;
+        if (!currentParams) { window.location.href = destination; return; }
+        window.location.href = destination.includes("?")
+            ? destination + "&" + currentParams.substring(1)
+            : destination + currentParams;
+    }
+
+    // Botão aparece aos 4:30 (270 segundos)
+    setTimeout(function() {
+        const cta = document.getElementById('cta-block');
+        if (cta) {
+            cta.classList.add('visible');
+            cta.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+    }, 270000);
+    </script>
+
+</body>
+</html>
