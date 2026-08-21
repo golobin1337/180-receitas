@@ -752,6 +752,37 @@ body {
 }
 .testi-btn:hover { background: #F2F2F2; }
 
+.feedback-carousel { position: relative; display: flex; align-items: center; gap: 10px; }
+.fc-track {
+    display: flex;
+    gap: 16px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    padding: 8px 4px 16px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+}
+.fc-track::-webkit-scrollbar { display: none; }
+.fc-slide { flex: 0 0 auto; scroll-snap-align: center; width: 260px; }
+.fc-slide img { width: 100%; height: auto; border-radius: 16px; box-shadow: 0 4px 16px rgba(0,0,0,.15); display: block; }
+.fc-arrow {
+    flex-shrink: 0;
+    width: 40px; height: 40px;
+    border-radius: 50%;
+    border: none;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,.18);
+    font-size: 22px;
+    color: #1A1A2E;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+.fc-arrow:hover { background: #F2F2F2; }
+
 /* ── DOBRA 9 — FAQ ── */
 .faq-sec { background: #fff; }
 .faq-list { max-width: 720px; margin: 0 auto; }
@@ -856,6 +887,10 @@ body {
 
     /* Testimonials 1 coluna */
     .testi-feed { grid-template-columns: 1fr; }
+
+    /* Feedback carousel compacto */
+    .fc-slide { width: 190px; }
+    .fc-arrow { width: 32px; height: 32px; font-size: 17px; }
 
     /* FAQ */
     .faq-btn { font-size: 14px; padding: 16px 18px; }

@@ -12,6 +12,13 @@ function redirectWithParams(destination) {
     }
 }
 
+function scrollFeedback(btn, dir) {
+    const track = btn.parentElement.querySelector('.fc-track');
+    const slide = track.querySelector('.fc-slide');
+    const amount = slide ? slide.getBoundingClientRect().width + 16 : 260;
+    track.scrollBy({ left: amount * dir, behavior: 'smooth' });
+}
+
 function toggleFaq(btn) {
     const answer = btn.nextElementSibling;
     const isOpen = answer.classList.contains('open');

@@ -243,31 +243,36 @@
 
 
 <!-- ════════════════════════════════════
-     DOBRA 6 — BONOS
+     DOBRA 6 — TESTIMONIOS
 ════════════════════════════════════ -->
-<section class="sec bonus-sec">
+<section class="sec testimonials-sec">
     <div class="sec-inner">
-        <h2 class="sec-title">Todavía te llevas <span class="hl">TODO <br>ESTO GRATIS</span></h2>
-        <p class="sec-sub">3 bonos exclusivos que complementan <br>perfectamente la guía principal</p>
-        <div class="bonus-grid">
-            <div class="bonus-card">
-                <div class="bonus-tag">🎁 Bono #1</div>
-                <img src="public/tempero.jpg" alt="Aderezos y Salsas" class="bonus-img" loading="lazy" decoding="async">
-                <div class="bonus-title">Aderezos y Salsas que Transforman Cualquier Plato</div>
-                <div class="bonus-desc">Salsas y mezclas de especias que hacen que la carne molida parezca hecha en restaurante. Ingredientes simples, resultado sorprendente.</div>
+        <h2 class="sec-title">+1697 PERSONAS YA <span class="r">TRANSFORMARON SU COCINA</span></h2>
+
+        <div class="rating-overview">
+            <div class="rating-big">4.9</div>
+            <div class="stars-big">★★★★★</div>
+            <div class="rating-count">Basado en 2.847 reseñas verificadas</div>
+            <div class="rating-bars">
+                <div class="rb-row"><span>5 ★</span><div class="bar-track"><div class="bar-fill" style="width:91%"></div></div><span>91%</span></div>
+                <div class="rb-row"><span>4 ★</span><div class="bar-track"><div class="bar-fill" style="width:7%"></div></div><span>7%</span></div>
+                <div class="rb-row"><span>3 ★</span><div class="bar-track"><div class="bar-fill" style="width:1%"></div></div><span>1%</span></div>
+                <div class="rb-row"><span>2 ★</span><div class="bar-track"><div class="bar-fill" style="width:.5%"></div></div><span>0%</span></div>
+                <div class="rb-row"><span>1 ★</span><div class="bar-track"><div class="bar-fill" style="width:.5%"></div></div><span>0%</span></div>
             </div>
-            <div class="bonus-card">
-                <div class="bonus-tag">🎁 Bono #2</div>
-                <img src="public/lista.jpg" alt="Lista de Compras" class="bonus-img" loading="lazy" decoding="async">
-                <div class="bonus-title">Lista de Compras</div>
-                <div class="bonus-desc">Lista optimizada para comprar solo lo que necesitas, sin desperdicios y ahorrando bastante en el mercado.</div>
+        </div>
+
+        <div class="feedback-carousel">
+            <button class="fc-arrow fc-arrow-prev" onclick="scrollFeedback(this, -1)" aria-label="Anterior">‹</button>
+            <div class="fc-track" id="feedback-track">
+                <div class="fc-slide"><img src="public/feedback/feedback-1.jpg" alt="Testimonio de clienta 1" loading="lazy" decoding="async"></div>
+                <div class="fc-slide"><img src="public/feedback/feedback-2.jpg" alt="Testimonio de clienta 2" loading="lazy" decoding="async"></div>
+                <div class="fc-slide"><img src="public/feedback/feedback-3.jpg" alt="Testimonio de clienta 3" loading="lazy" decoding="async"></div>
+                <div class="fc-slide"><img src="public/feedback/feedback-4.jpg" alt="Testimonio de clienta 4" loading="lazy" decoding="async"></div>
+                <div class="fc-slide"><img src="public/feedback/feedback-5.jpg" alt="Testimonio de clienta 5" loading="lazy" decoding="async"></div>
+                <div class="fc-slide"><img src="public/feedback/feedback-6.jpg" alt="Testimonio de clienta 6" loading="lazy" decoding="async"></div>
             </div>
-            <div class="bonus-card">
-                <div class="bonus-tag">🎁 Bono #3</div>
-                <img src="public/lanche.jpg" alt="Merienda Resuelta" class="bonus-img" loading="lazy" decoding="async">
-                <div class="bonus-title">Merienda Resuelta</div>
-                <div class="bonus-desc">Meriendas prácticas y deliciosas para preparar en menos de 15 minutos. Perfectas para el ajetreo del día a día.</div>
-            </div>
+            <button class="fc-arrow fc-arrow-next" onclick="scrollFeedback(this, 1)" aria-label="Siguiente">›</button>
         </div>
     </div>
 </section>
@@ -283,11 +288,10 @@
 
             <!-- PLAN COMPLETO -->
             <div class="plan-card-outer">
-                <div class="plan-badge">⭐ OFERTA UNICA</div>
+                <div class="plan-badge">🎁 OFERTA ÚNICA</div>
                 <div class="plan-card featured">
                 <div class="plan-header">
-                    <div class="plan-name">Plan Completo</div>
-                    <div class="plan-subtitle">180 recetas + todos los bonos incluidos</div>
+                    <div class="plan-subtitle">180 recetas + 5 bonos exclusivos incluidos</div>
                     <div class="plan-price-old">De $67</div>
                     <div class="plan-price">$7.90 USD</div>
                     <div class="plan-price-note">acceso de por vida</div>
@@ -303,7 +307,7 @@
                         <li><span class="gift">🎁</span> 10 Meriendas Rápidas con Carne Molida para Congelar</li>
                         <li><span class="gift">🎁</span> 10 Condimentos Caseros Listos para Carne Molida</li>
                         <li><span class="gift">🎁</span> Lista de Compras Inteligente</li>
-                        <li><span class="gift">🎁</span> Guía de Congelación y Descongelación</li>
+                        <li><span class="gift">🎁</span> Videoclases</li>
                     </ul>
                     <a href="javascript:void(0)" onclick="redirectWithParams('https://pay.hotmart.com/E107155614G')" class="btn btn-green">QUIERO EL PLAN COMPLETO</a>
                     <div style="display:flex;align-items:center;justify-content:center;gap:7px;margin-top:12px;border:1.5px solid #2E7D32;border-radius:50px;padding:8px 16px;color:#2E7D32;font-family:'Montserrat',sans-serif;font-weight:700;font-size:12px;letter-spacing:.4px;">
@@ -333,159 +337,31 @@
 
 
 <!-- ════════════════════════════════════
-     DOBRA 8 — TESTIMONIOS
+     DOBRA 8 — BONOS
 ════════════════════════════════════ -->
-<section class="sec testimonials-sec">
+<section class="sec bonus-sec">
     <div class="sec-inner">
-        <h2 class="sec-title">+1697 PERSONAS YA <span class="r">TRANSFORMARON SU COCINA</span></h2>
-
-        <div class="rating-overview">
-            <div class="rating-big">4.9</div>
-            <div class="stars-big">★★★★★</div>
-            <div class="rating-count">Basado en 2.847 reseñas verificadas</div>
-            <div class="rating-bars">
-                <div class="rb-row"><span>5 ★</span><div class="bar-track"><div class="bar-fill" style="width:91%"></div></div><span>91%</span></div>
-                <div class="rb-row"><span>4 ★</span><div class="bar-track"><div class="bar-fill" style="width:7%"></div></div><span>7%</span></div>
-                <div class="rb-row"><span>3 ★</span><div class="bar-track"><div class="bar-fill" style="width:1%"></div></div><span>1%</span></div>
-                <div class="rb-row"><span>2 ★</span><div class="bar-track"><div class="bar-fill" style="width:.5%"></div></div><span>0%</span></div>
-                <div class="rb-row"><span>1 ★</span><div class="bar-track"><div class="bar-fill" style="width:.5%"></div></div><span>0%</span></div>
+        <h2 class="sec-title">Todavía te llevas <span class="hl">TODO <br>ESTO GRATIS</span></h2>
+        <p class="sec-sub">3 bonos exclusivos que complementan <br>perfectamente la guía principal</p>
+        <div class="bonus-grid">
+            <div class="bonus-card">
+                <div class="bonus-tag">🎁 Bono #1</div>
+                <img src="public/tempero.jpg" alt="Aderezos y Salsas" class="bonus-img" loading="lazy" decoding="async">
+                <div class="bonus-title">Aderezos y Salsas que Transforman Cualquier Plato</div>
+                <div class="bonus-desc">Salsas y mezclas de especias que hacen que la carne molida parezca hecha en restaurante. Ingredientes simples, resultado sorprendente.</div>
             </div>
-        </div>
-
-        <div class="testi-feed">
-
-            <div class="testi-card">
-                <div class="testi-head">
-                    <div class="testi-head-left">
-                        <div class="testi-avatar" style="background:#E91E63;">AP</div>
-                        <div>
-                            <div class="testi-name">Ana Paula M.</div>
-                            <div class="testi-time">2h</div>
-                        </div>
-                    </div>
-                    <div class="testi-dots">···</div>
-                </div>
-                <p class="testi-text">Me encantó, estas recetas son sensacionales, hice el pastel cremoso para mis hijos y quedó perfecto. ¡Ahora es el plato favorito en casa!</p>
-                <div class="testi-actions">
-                    <div class="testi-reaction-count">❤️ 23</div>
-                    <div class="testi-btns">
-                        <button class="testi-btn">Me gusta</button>
-                        <button class="testi-btn">Comentar</button>
-                        <button class="testi-btn">Compartir</button>
-                    </div>
-                </div>
+            <div class="bonus-card">
+                <div class="bonus-tag">🎁 Bono #2</div>
+                <img src="public/lista.jpg" alt="Lista de Compras" class="bonus-img" loading="lazy" decoding="async">
+                <div class="bonus-title">Lista de Compras</div>
+                <div class="bonus-desc">Lista optimizada para comprar solo lo que necesitas, sin desperdicios y ahorrando bastante en el mercado.</div>
             </div>
-
-            <div class="testi-card">
-                <div class="testi-head">
-                    <div class="testi-head-left">
-                        <div class="testi-avatar" style="background:#1976D2;">CR</div>
-                        <div>
-                            <div class="testi-name">Carlos R.</div>
-                            <div class="testi-time">5h</div>
-                        </div>
-                    </div>
-                    <div class="testi-dots">···</div>
-                </div>
-                <p class="testi-text">La variedad lo cambió todo jaja, yo hacía la carne molida siempre igual y ya era aburrido, ahora acierto siempre, nunca más repetí el mismo plato...</p>
-                <div class="testi-actions">
-                    <div class="testi-reaction-count">❤️ 34</div>
-                    <div class="testi-btns">
-                        <button class="testi-btn">Me gusta</button>
-                        <button class="testi-btn">Comentar</button>
-                        <button class="testi-btn">Compartir</button>
-                    </div>
-                </div>
+            <div class="bonus-card">
+                <div class="bonus-tag">🎁 Bono #3</div>
+                <img src="public/lanche.jpg" alt="Merienda Resuelta" class="bonus-img" loading="lazy" decoding="async">
+                <div class="bonus-title">Merienda Resuelta</div>
+                <div class="bonus-desc">Meriendas prácticas y deliciosas para preparar en menos de 15 minutos. Perfectas para el ajetreo del día a día.</div>
             </div>
-
-            <div class="testi-card">
-                <div class="testi-head">
-                    <div class="testi-head-left">
-                        <div class="testi-avatar" style="background:#7B1FA2;">FL</div>
-                        <div>
-                            <div class="testi-name">Fernanda L.</div>
-                            <div class="testi-time">1d</div>
-                        </div>
-                    </div>
-                    <div class="testi-dots">···</div>
-                </div>
-                <p class="testi-text">¡Estoy impresionada con la cantidad de recetas! Lo compré pensando que iba a usar poco y ya hice 8 recetas en el primer mes. ¡Mi esposo se volvió mi mayor fan! 💗</p>
-                <div class="testi-actions">
-                    <div class="testi-reaction-count">❤️ 45</div>
-                    <div class="testi-btns">
-                        <button class="testi-btn">Me gusta</button>
-                        <button class="testi-btn">Comentar</button>
-                        <button class="testi-btn">Compartir</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="testi-card">
-                <div class="testi-head">
-                    <div class="testi-head-left">
-                        <div class="testi-avatar" style="background:#2E7D32;">RS</div>
-                        <div>
-                            <div class="testi-name">Ricardo S.</div>
-                            <div class="testi-time">1d</div>
-                        </div>
-                    </div>
-                    <div class="testi-dots">···</div>
-                </div>
-                <p class="testi-text">Los bonos valen más que el libro principal. Los condimentos y salsas transformaron por completo mi cocina. ¡Lo recomiendo muchísimo!</p>
-                <div class="testi-actions">
-                    <div class="testi-reaction-count">❤️ 18</div>
-                    <div class="testi-btns">
-                        <button class="testi-btn">Me gusta</button>
-                        <button class="testi-btn">Comentar</button>
-                        <button class="testi-btn">Compartir</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="testi-card">
-                <div class="testi-head">
-                    <div class="testi-head-left">
-                        <div class="testi-avatar" style="background:#F57C00;">AT</div>
-                        <div>
-                            <div class="testi-name">Andrés T.</div>
-                            <div class="testi-time">2d</div>
-                        </div>
-                    </div>
-                    <div class="testi-dots">···</div>
-                </div>
-                <p class="testi-text">Todos los domingos preparo el almuerzo para la familia, sigo las recetas y mejoré mucho la calidad de los platos que hago. Todos me felicitaron, y con esa salsa ni se diga</p>
-                <div class="testi-actions">
-                    <div class="testi-reaction-count">❤️ 29</div>
-                    <div class="testi-btns">
-                        <button class="testi-btn">Me gusta</button>
-                        <button class="testi-btn">Comentar</button>
-                        <button class="testi-btn">Compartir</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="testi-card">
-                <div class="testi-head">
-                    <div class="testi-head-left">
-                        <div class="testi-avatar" style="background:#C62828;">MC</div>
-                        <div>
-                            <div class="testi-name">Mariana C.</div>
-                            <div class="testi-time">3d</div>
-                        </div>
-                    </div>
-                    <div class="testi-dots">···</div>
-                </div>
-                <p class="testi-text">Recibí la guía por WhatsApp en menos de 5 minutos. Ya estaba cocinando ese mismo día. Súper práctico y las fotos de las recetas quedaron hermosas</p>
-                <div class="testi-actions">
-                    <div class="testi-reaction-count">❤️ 51</div>
-                    <div class="testi-btns">
-                        <button class="testi-btn">Me gusta</button>
-                        <button class="testi-btn">Comentar</button>
-                        <button class="testi-btn">Compartir</button>
-                    </div>
-                </div>
-            </div>
-
         </div>
     </div>
 </section>
