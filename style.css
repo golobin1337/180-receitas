@@ -665,6 +665,51 @@ body {
 }
 .plan-bonus-item:last-child { border-bottom: none; }
 
+/* value stack (resumen de compra) */
+.value-header { background: #FFF8F2 !important; border-bottom: 1px solid #FFE0C8; }
+.value-title { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 16px; color: #1A1A2E; margin-bottom: 16px; }
+.value-mockup { width: 100%; max-width: 230px; margin: 0 auto 18px; display: block; filter: drop-shadow(0 10px 22px rgba(0,0,0,.18)); }
+.value-price-old { font-size: 14px; color: #999; margin-bottom: 2px; }
+.value-price { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 46px; color: #2E7D32; line-height: 1; }
+.value-price span { font-size: 16px; font-weight: 700; vertical-align: super; margin-left: 3px; }
+.value-price-note { color: #888; font-size: 12px; margin-top: 6px; margin-bottom: 16px; }
+.value-guarantee {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    background: #F9FFF9;
+    border: 1.5px solid #A5D6A7;
+    border-radius: 50px;
+    padding: 8px 16px;
+    color: #2E7D32;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+}
+.value-summary-label {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 12px;
+    letter-spacing: 1.2px;
+    color: #C62828;
+    text-align: center;
+    margin-bottom: 14px;
+}
+.value-summary-list { list-style: none; margin-bottom: 22px; }
+.value-summary-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 9px 0;
+    border-bottom: 1px solid #F0F0F0;
+    font-size: 13.5px;
+    color: #444;
+}
+.value-summary-list li:last-child { border-bottom: none; }
+.value-item-name { flex: 1; line-height: 1.4; }
+.value-item-price { color: #AAA; text-decoration: line-through; white-space: nowrap; font-size: 13px; flex-shrink: 0; }
+.value-secure { text-align: center; font-size: 12px; color: #888; margin-top: 12px; }
+
 /* guarantee */
 .guarantee-strip {
     display: flex;
