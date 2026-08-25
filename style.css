@@ -668,7 +668,7 @@ body {
 /* value stack (resumen de compra) */
 .value-header { background: #FFF8F2 !important; border-bottom: 1px solid #FFE0C8; }
 .value-title { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 16px; color: #1A1A2E; margin-bottom: 16px; }
-.value-mockup { width: 100%; max-width: 230px; margin: 0 auto 18px; display: block; filter: drop-shadow(0 10px 22px rgba(0,0,0,.18)); }
+.value-mockup { width: 100%; max-width: 270px; margin: 0 auto 18px; display: block; filter: drop-shadow(0 10px 22px rgba(0,0,0,.18)); }
 .value-price-old { font-size: 14px; color: #999; margin-bottom: 2px; }
 .value-price { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 46px; color: #2E7D32; line-height: 1; }
 .value-price span { font-size: 16px; font-weight: 700; vertical-align: super; margin-left: 3px; }
