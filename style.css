@@ -1,0 +1,1002 @@
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #333;
+    background: #fff;
+    overflow-x: hidden;
+}
+
+/* ── URGENCY BAR ── */
+.urgency-bar {
+    background: #B71C1C;
+    color: #fff;
+    text-align: center;
+    padding: 13px 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 13px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+    animation: bar-pulse 2.4s ease-in-out infinite;
+}
+@keyframes bar-pulse {
+    0%,100% { background: #B71C1C; }
+    50%      { background: #C62828; }
+}
+.urgency-bar .badge {
+    display: inline-block;
+    background: #fff;
+    color: #B71C1C;
+    font-size: 12px;
+    font-weight: 900;
+    padding: 2px 10px;
+    border-radius: 20px;
+    margin-left: 10px;
+    vertical-align: middle;
+}
+
+/* ── HERO ── */
+.hero {
+    background: linear-gradient(160deg, #FFF8F0 0%, #FFF3E0 60%, #FFEDE0 100%);
+    padding: 56px 20px 72px;
+    text-align: center;
+}
+.hero-tag {
+    display: inline-block;
+    background: #FF6F00;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 6px 18px;
+    border-radius: 20px;
+    margin-bottom: 22px;
+}
+.hero h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: clamp(32px, 5.5vw, 64px);
+    color: #1A1A2E;
+    line-height: 1.05;
+    margin-bottom: 14px;
+}
+.hero h1 .big {
+    display: block;
+    font-size: clamp(44px, 8vw, 92px);
+    color: #C62828;
+    line-height: 1;
+}
+.hero-sub {
+    font-size: clamp(16px, 2.2vw, 19px);
+    color: #555;
+    max-width: 600px;
+    margin: 0 auto 32px;
+    line-height: 1.65;
+}
+.hero-sub .hl { color: #FF6F00; font-weight: 700; }
+
+/* book mockup — centered */
+.hero-book-wrap {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto 36px;
+}
+.hero-book {
+    width: min(380px, 88vw);
+    background: linear-gradient(145deg, #2C1008, #6B2E00);
+    border-radius: 20px;
+    padding: 36px 28px 32px;
+    box-shadow: 0 24px 64px rgba(0,0,0,.38), 0 8px 24px rgba(0,0,0,.2);
+    text-align: center;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    position: relative;
+    overflow: hidden;
+}
+.hero-book::before {
+    content: '';
+    position: absolute;
+    top: -50px; right: -50px;
+    width: 180px; height: 180px;
+    background: rgba(255,255,255,.05);
+    border-radius: 50%;
+}
+.hero-book::after {
+    content: '';
+    position: absolute;
+    bottom: -40px; left: -40px;
+    width: 140px; height: 140px;
+    background: rgba(255,255,255,.04);
+    border-radius: 50%;
+}
+.hero-img {
+    width: min(420px, 90vw);
+    border-radius: 20px;
+    box-shadow: 0 24px 64px rgba(0,0,0,.25), 0 8px 24px rgba(0,0,0,.15);
+    display: block;
+}
+
+.hero-book-eyebrow {
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    opacity: .55;
+    margin-bottom: 6px;
+}
+.hero-book-num {
+    font-size: clamp(72px, 18vw, 108px);
+    font-weight: 900;
+    color: #FFD700;
+    line-height: 1;
+    text-shadow: 0 4px 16px rgba(0,0,0,.5);
+}
+.hero-book-title {
+    font-size: clamp(16px, 4vw, 22px);
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    line-height: 1.3;
+    margin-top: 4px;
+}
+.hero-book-divider {
+    width: 50px;
+    height: 3px;
+    background: rgba(255,215,0,.45);
+    margin: 14px auto;
+    border-radius: 2px;
+}
+.hero-book-deco { font-size: 28px; letter-spacing: 6px; }
+
+/* price — centered */
+.price-center { margin-bottom: 28px; }
+.price-from { font-size: 16px; color: #888; margin-bottom: 4px; }
+.price-strike { text-decoration: line-through; color: #C0392B; font-weight: 600; }
+.price-big {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: clamp(52px, 10vw, 76px);
+    color: #2E7D32;
+    line-height: 1;
+}
+.price-currency { font-size: 26px; vertical-align: super; }
+
+/* hero cta */
+.btn-hero {
+    font-size: clamp(16px, 2.2vw, 19px) !important;
+    padding: 22px 56px !important;
+    min-width: min(360px, 90vw);
+    display: inline-block;
+}
+
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    border: none;
+    cursor: pointer;
+    transition: transform .18s, box-shadow .18s;
+}
+.btn-green {
+    background: linear-gradient(135deg, #2E7D32, #43A047);
+    color: #fff;
+    font-size: clamp(15px, 2vw, 19px);
+    letter-spacing: .4px;
+    text-transform: uppercase;
+    padding: 20px 48px;
+    border-radius: 50px;
+    box-shadow: 0 8px 28px rgba(46,125,50,.5);
+    animation: btn-glow 1.9s ease-in-out infinite;
+    margin-top: 20px;
+}
+@keyframes btn-glow {
+    0%,100% { transform: scale(1);    box-shadow: 0 8px 28px rgba(46,125,50,.5); }
+    50%      { transform: scale(1.03); box-shadow: 0 12px 38px rgba(46,125,50,.65); }
+}
+.btn-green:hover { animation: none; transform: scale(1.05); }
+.btn-red {
+    background: linear-gradient(135deg, #C62828, #E53935);
+    color: #fff;
+    padding: 18px 36px;
+    border-radius: 8px;
+    font-size: 15px;
+    text-transform: uppercase;
+    box-shadow: 0 6px 22px rgba(198,40,40,.4);
+    display: block;
+    text-align: center;
+}
+.btn-red:hover { transform: translateY(-2px); }
+.btn-dark {
+    background: transparent;
+    color: #555;
+    padding: 17px 36px;
+    border-radius: 8px;
+    font-size: 15px;
+    text-transform: uppercase;
+    border: 2px solid #CCC;
+    display: block;
+    text-align: center;
+}
+.btn-dark:hover { border-color: #999; color: #333; transform: translateY(-2px); }
+
+.trust-row {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    flex-wrap: wrap;
+    margin-top: 14px;
+    font-size: 13px;
+    color: #666;
+}
+.trust-row .ti { display: flex; align-items: center; gap: 6px; }
+
+/* ── SOCIAL PROOF BAR ── */
+.sp-bar {
+    background: #FFF0EB;
+    padding: 28px 20px;
+}
+.sp-bar-inner {
+    max-width: 680px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: nowrap;
+}
+.stat {
+    text-align: center;
+    background: #fff;
+    border: 1.5px solid #FFD5C8;
+    border-radius: 14px;
+    padding: 18px 20px;
+    flex: 1;
+    min-width: 0;
+}
+@media (max-width: 400px) {
+    .stat { padding: 14px 10px; border-radius: 10px; }
+    .stat-n { font-size: 22px !important; }
+}
+.stat-n {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: 30px;
+    color: #E8531A;
+    line-height: 1;
+}
+.stat-l {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    color: #999;
+    margin-top: 5px;
+}
+
+/* ── SECTIONS ── */
+.sec { padding: 72px 20px; }
+.sec-inner { max-width: 1020px; margin: 0 auto; }
+.sec-title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: clamp(24px, 3.8vw, 40px);
+    color: #1A1A2E;
+    text-align: center;
+    line-height: 1.2;
+    margin-bottom: 14px;
+}
+.sec-title .r { color: #C62828; }
+.sec-title .g { color: #2E7D32; }
+.sec-title .y { color: #FFB300; }
+.sec-sub { text-align: center; color: #777; font-size: 16px; max-width: 540px; margin: 0 auto 48px; line-height: 1.65; }
+
+/* ── DOBRA 2 — PAIN ── */
+.pain-sec { background: #F9F9F9; }
+.pain-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(278px, 1fr)); gap: 18px; }
+.pain-card {
+    background: #fff;
+    border: 2px solid #FFE0E0;
+    border-left: 5px solid #C62828;
+    border-radius: 12px;
+    padding: 22px 20px;
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    box-shadow: 0 3px 10px rgba(0,0,0,.05);
+    transition: transform .2s;
+}
+.pain-card:hover { transform: translateY(-3px); }
+.pain-emoji { font-size: 28px; flex-shrink: 0; margin-top: 2px; }
+.pain-text { font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 14.5px; color: #333; line-height: 1.45; }
+
+/* transition */
+.transition-block {
+    background: #FFF8F2;
+    padding: 70px 20px 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    border-top: 1px solid #FFE8D6;
+}
+.transition-block::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(ellipse at 20% 50%, rgba(255,111,0,.06) 0%, transparent 60%),
+        radial-gradient(ellipse at 80% 50%, rgba(198,40,40,.06) 0%, transparent 60%);
+    pointer-events: none;
+}
+.transition-block-inner {
+    position: relative;
+    max-width: 720px;
+    margin: 0 auto;
+}
+.transition-block-icon {
+    font-size: 40px;
+    margin-bottom: 20px;
+    display: block;
+}
+.transition-block p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: clamp(22px, 3.5vw, 36px);
+    color: #1A1A2E;
+    line-height: 1.4;
+}
+.transition-block span { color: #FFB300; }
+.transition-block-line {
+    display: none;
+}
+
+/* ── DOBRA 3 — URGENCY MID ── */
+.urgency-mid {
+    background: #FFF8F2;
+    padding: 48px 20px 56px;
+}
+.urgency-connector {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 28px;
+}
+.urgency-connector-line {
+    width: 1.5px;
+    height: 44px;
+    background: linear-gradient(to bottom, transparent, #C62828 60%);
+    opacity: .35;
+}
+.urgency-connector-line:last-child {
+    background: linear-gradient(to bottom, #C62828 40%, transparent);
+}
+.urgency-connector-label {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 11px;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: #C62828;
+    padding: 10px 0;
+}
+.urgency-card {
+    background: linear-gradient(145deg, #D94F3D, #C0392B);
+    border-radius: 20px;
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 44px 40px;
+    text-align: center;
+    box-shadow: 0 12px 50px rgba(192,57,43,.35), 0 4px 16px rgba(0,0,0,.1);
+    position: relative;
+    overflow: hidden;
+}
+.urgency-card::before {
+    content: '';
+    position: absolute;
+    top: -60px; right: -60px;
+    width: 200px; height: 200px;
+    background: rgba(255,255,255,.06);
+    border-radius: 50%;
+    pointer-events: none;
+}
+.urgency-card::after {
+    content: '';
+    position: absolute;
+    bottom: -50px; left: -50px;
+    width: 160px; height: 160px;
+    background: rgba(255,255,255,.04);
+    border-radius: 50%;
+    pointer-events: none;
+}
+.urgency-icon {
+    font-size: 44px;
+    display: block;
+    margin-bottom: 16px;
+}
+.urgency-title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: clamp(26px, 4vw, 42px);
+    color: #fff;
+    line-height: 1.15;
+    margin-bottom: 14px;
+    position: relative;
+}
+.urgency-sub {
+    font-size: clamp(14px, 1.8vw, 16px);
+    color: rgba(255,255,255,.85);
+    line-height: 1.6;
+    position: relative;
+}
+.urgency-hl {
+    color: #FFD700;
+    font-weight: 700;
+}
+
+/* ── DOBRA 4 — BENEFITS ── */
+.benefits-sec { background: #fff; }
+.benefits-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(278px, 1fr)); gap: 22px; }
+.benefit-card {
+    background: #F6FFF6;
+    border: 1px solid #C8E6C9;
+    border-top: 4px solid #2E7D32;
+    border-radius: 12px;
+    padding: 28px 22px;
+    text-align: center;
+    box-shadow: 0 4px 14px rgba(46,125,50,.08);
+    transition: transform .2s;
+}
+.benefit-card:hover { transform: translateY(-4px); }
+.benefit-icon { font-size: 40px; margin-bottom: 14px; }
+.benefit-title { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 15px; color: #1A1A2E; margin-bottom: 8px; }
+.benefit-desc { font-size: 13.5px; color: #666; line-height: 1.55; }
+
+/* ── DOBRA 5 — GALLERY ── */
+.gallery-sec { background: #FFF8F0; }
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+}
+@media (max-width: 700px) { .gallery-grid { grid-template-columns: repeat(2, 1fr); } }
+.gallery-card {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 14px rgba(0,0,0,.1);
+    position: relative;
+    transition: transform .2s;
+}
+.gallery-card:hover { transform: scale(1.04); }
+.gallery-img {
+    width: 100%;
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    overflow: hidden;
+}
+.gallery-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.gallery-kcal {
+    position: absolute;
+    top: 8px; right: 8px;
+    background: rgba(44,16,8,.82);
+    color: #FFB300;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 10px;
+    padding: 3px 8px;
+    border-radius: 10px;
+}
+.gallery-name {
+    padding: 9px 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 11px;
+    color: #333;
+    text-align: center;
+    line-height: 1.3;
+}
+.gallery-more {
+    text-align: center;
+    color: #aaa;
+    margin-top: 22px;
+    font-size: 14px;
+}
+
+/* ── DOBRA 6 — BONUSES ── */
+.bonus-sec { background: #FFF8F2; }
+.bonus-sec .sec-sub { color: #777; }
+.bonus-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(278px, 1fr)); gap: 22px; }
+.bonus-card {
+    background: #fff;
+    border: 1px solid #FFE0C8;
+    border-top: 4px solid #FFB300;
+    border-radius: 12px;
+    padding: 30px 22px;
+    text-align: center;
+    box-shadow: 0 4px 16px rgba(0,0,0,.06);
+    transition: transform .2s;
+}
+.bonus-card:hover { transform: translateY(-4px); }
+.bonus-tag {
+    display: inline-block;
+    background: #FFB300;
+    color: #1A1A2E;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 4px 14px;
+    border-radius: 20px;
+    margin-bottom: 16px;
+}
+.bonus-icon { font-size: 44px; margin-bottom: 14px; }
+.bonus-img {
+    width: 128px;
+    height: 128px;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto 14px;
+}
+.bonus-title { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 16px; color: #1A1A2E; margin-bottom: 10px; line-height: 1.3; }
+.bonus-desc { font-size: 13.5px; color: #666; line-height: 1.55; }
+
+/* ── DOBRA 7 — PRICING ── */
+.pricing-sec { background: #F4F4F4; }
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(278px, 1fr));
+    gap: 30px;
+    max-width: 700px;
+    margin: 0 auto;
+}
+.plan-card {
+    background: #fff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,.09);
+    border: 1.5px solid #EEE;
+}
+.plan-card.featured {
+    border: 2px solid #2E7D32;
+    box-shadow: 0 12px 48px rgba(46,125,50,.22);
+}
+.plan-card-outer {
+    position: relative;
+    padding-top: 16px;
+}
+.plan-badge {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    background: #FF6F00;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 11px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 5px 14px;
+    border-radius: 20px;
+    box-shadow: 0 3px 10px rgba(0,0,0,.2);
+    z-index: 1;
+}
+.plan-header {
+    background: #FFF8F2;
+    border-bottom: 1px solid #FFE0C8;
+    padding: 24px 22px;
+    text-align: center;
+}
+.plan-card.featured .plan-header {
+    background: linear-gradient(145deg, #2E7D32, #43A047);
+    border-bottom: none;
+}
+.plan-name { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 24px; color: #1A1A2E; margin-bottom: 4px; }
+.plan-card.featured .plan-name { color: #fff; }
+.plan-subtitle { font-size: 13px; color: #888; margin-bottom: 14px; }
+.plan-card.featured .plan-subtitle { color: rgba(255,255,255,.78); }
+.plan-price-old { font-size: 14px; color: #999; text-decoration: line-through; margin-bottom: 2px; }
+.plan-card.featured .plan-price-old { color: rgba(255,255,255,.6); }
+.plan-price { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 54px; color: #2E7D32; line-height: 1; }
+.plan-card.featured .plan-price { color: #fff; }
+.plan-price sup { font-size: 22px; vertical-align: super; }
+.plan-price-note { color: #888; font-size: 12px; margin-top: 6px; }
+.plan-card.featured .plan-price-note { color: rgba(255,255,255,.75); }
+.gift { font-size: 15px; flex-shrink: 0; }
+.plan-body { padding: 26px 22px; }
+.plan-body .btn { display: block; text-align: center; white-space: normal; }
+.plan-features { list-style: none; margin-bottom: 26px; }
+.plan-features li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 0;
+    border-bottom: 1px solid #F0F0F0;
+    font-size: 14px;
+    color: #444;
+}
+.plan-features li:last-child { border-bottom: none; }
+.plan-features li.disabled { color: #CCC; }
+.plan-features li.disabled .struck-text { text-decoration: line-through; }
+.plan-features li.disabled.bonus-struck { color: #555; }
+.plan-features li.disabled.bonus-struck .nope { color: #C62828; }
+.chk  { color: #2E7D32; font-weight: 700; font-size: 16px; flex-shrink: 0; }
+.nope { color: #CCC; font-size: 16px; flex-shrink: 0; }
+.plan-note { text-align: center; font-size: 12px; color: #AAA; margin-top: 10px; }
+.plan-bonus-list {
+    background: #FFF8F2;
+    border: 1px solid #FFE0C8;
+    border-radius: 10px;
+    padding: 14px 16px;
+    margin-bottom: 20px;
+}
+.plan-bonus-label {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    color: #E8531A;
+    margin-bottom: 10px;
+}
+.plan-bonus-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    font-size: 13px;
+    color: #444;
+    padding: 5px 0;
+    border-bottom: 1px solid #FFE8D6;
+    line-height: 1.4;
+}
+.plan-bonus-item:last-child { border-bottom: none; }
+
+/* value stack (resumen de compra) */
+.value-header { background: #FFF8F2 !important; border-bottom: 1px solid #FFE0C8; }
+.value-title { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 16px; color: #1A1A2E; margin-bottom: 16px; }
+.value-mockup { width: 100%; max-width: 270px; margin: 0 auto 18px; display: block; filter: drop-shadow(0 10px 22px rgba(0,0,0,.18)); }
+.value-price-old { font-size: 14px; color: #999; margin-bottom: 2px; }
+.value-price { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 46px; color: #2E7D32; line-height: 1; }
+.value-price span { font-size: 16px; font-weight: 700; vertical-align: super; margin-left: 3px; }
+.value-price-note { color: #888; font-size: 12px; margin-top: 6px; margin-bottom: 16px; }
+.value-guarantee {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    background: #F9FFF9;
+    border: 1.5px solid #A5D6A7;
+    border-radius: 50px;
+    padding: 8px 16px;
+    color: #2E7D32;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+}
+.value-summary-label {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 12px;
+    letter-spacing: 1.2px;
+    color: #C62828;
+    text-align: center;
+    margin-bottom: 14px;
+}
+.value-summary-list { list-style: none; margin-bottom: 22px; }
+.value-summary-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 9px 0;
+    border-bottom: 1px solid #F0F0F0;
+    font-size: 13.5px;
+    color: #444;
+}
+.value-summary-list li:last-child { border-bottom: none; }
+.value-item-name { flex: 1; line-height: 1.4; }
+.value-item-price { color: #AAA; text-decoration: line-through; white-space: nowrap; font-size: 13px; flex-shrink: 0; }
+.value-secure { text-align: center; font-size: 12px; color: #888; margin-top: 12px; }
+
+/* guarantee */
+.guarantee-strip {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    background: #F9FFF9;
+    border: 2px dashed #A5D6A7;
+    border-radius: 14px;
+    padding: 22px 28px;
+    max-width: 580px;
+    margin: 36px auto 0;
+}
+.guarantee-icon { font-size: 52px; flex-shrink: 0; }
+.guarantee-text h4 { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 16px; color: #2E7D32; margin-bottom: 4px; }
+.guarantee-text p { font-size: 13.5px; color: #555; line-height: 1.5; }
+
+/* ── DOBRA 8 — TESTIMONIALS ── */
+.testimonials-sec { background: #F0F2F5; }
+.rating-overview { text-align: center; margin-bottom: 48px; }
+.rating-big { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 76px; color: #1A1A2E; line-height: 1; }
+.stars-big { color: #FFB300; font-size: 30px; margin: 6px 0; }
+.rating-count { color: #999; font-size: 14px; }
+.rating-bars { max-width: 300px; margin: 20px auto 0; }
+.rb-row { display: flex; align-items: center; gap: 10px; margin-bottom: 6px; font-size: 13px; color: #777; }
+.rb-row span:first-child { width: 40px; text-align: right; }
+.bar-track { flex: 1; height: 8px; background: #E0E0E0; border-radius: 4px; overflow: hidden; }
+.bar-fill { height: 100%; background: #FFB300; border-radius: 4px; }
+
+.testi-feed {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 12px;
+}
+.testi-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 16px;
+    box-shadow: 0 1px 3px rgba(0,0,0,.12), 0 1px 2px rgba(0,0,0,.06);
+}
+.testi-head {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.testi-head-left { display: flex; align-items: center; gap: 10px; }
+.testi-avatar {
+    width: 42px; height: 42px;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800; font-size: 15px;
+    color: #fff; flex-shrink: 0;
+}
+.testi-name { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 14px; color: #050505; line-height: 1.2; }
+.testi-time { font-size: 12px; color: #65676B; margin-top: 1px; }
+.testi-dots { font-size: 18px; color: #606770; cursor: default; letter-spacing: 1px; padding: 0 2px; line-height: 1; }
+.testi-text { font-size: 14px; color: #1C1E21; line-height: 1.6; margin-bottom: 10px; }
+.testi-actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid #E4E6EB;
+    padding-top: 8px;
+}
+.testi-reaction-count {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 13px;
+    color: #65676B;
+}
+.testi-btns { display: flex; }
+.testi-btn {
+    background: none;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #65676B;
+    cursor: default;
+    font-family: 'Open Sans', sans-serif;
+}
+.testi-btn:hover { background: #F2F2F2; }
+
+.feedback-carousel { position: relative; display: flex; align-items: center; gap: 10px; }
+.fc-track {
+    display: flex;
+    gap: 16px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    padding: 8px 4px 16px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+}
+.fc-track::-webkit-scrollbar { display: none; }
+.fc-slide { flex: 0 0 auto; scroll-snap-align: center; width: 260px; }
+.fc-slide img { width: 100%; height: auto; border-radius: 16px; box-shadow: 0 4px 16px rgba(0,0,0,.15); display: block; }
+.fc-arrow {
+    flex-shrink: 0;
+    width: 40px; height: 40px;
+    border-radius: 50%;
+    border: none;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,.18);
+    font-size: 22px;
+    color: #1A1A2E;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+.fc-arrow:hover { background: #F2F2F2; }
+
+/* ── DOBRA 9 — FAQ ── */
+.faq-sec { background: #fff; }
+.faq-list { max-width: 720px; margin: 0 auto; }
+.faq-item { border: 1px solid #E4E4E4; border-radius: 10px; margin-bottom: 12px; overflow: hidden; }
+.faq-btn {
+    width: 100%; background: none; border: none;
+    padding: 20px 24px;
+    text-align: left;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700; font-size: 15px;
+    color: #1A1A2E; cursor: pointer;
+    display: flex; justify-content: space-between; align-items: center;
+    transition: background .18s;
+}
+.faq-btn:hover { background: #FAFAFA; }
+.faq-btn.open  { color: #C62828; }
+.faq-arrow { font-size: 22px; color: #C62828; transition: transform .3s; line-height: 1; }
+.faq-btn.open .faq-arrow { transform: rotate(45deg); }
+.faq-answer {
+    display: none;
+    padding: 16px 24px 20px;
+    font-size: 15px; color: #555; line-height: 1.7;
+    border-top: 1px solid #F0F0F0;
+}
+.faq-answer.open { display: block; }
+
+/* ── DOBRA 10 — FINAL CTA ── */
+.final-cta {
+    background: #FFF8F2;
+    border-top: 1px solid #FFE8D6;
+    padding: 90px 20px;
+    text-align: center;
+}
+.final-cta h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: clamp(26px, 4.5vw, 50px);
+    color: #1A1A2E;
+    max-width: 700px;
+    margin: 0 auto 14px;
+    line-height: 1.2;
+}
+.final-cta h2 span { color: #C62828; }
+.final-cta-sub { color: #666; font-size: 17px; margin-bottom: 40px; }
+.final-cta-sub strong { color: #1A1A2E; }
+.final-cta .trust-row { justify-content: center; margin-top: 20px; color: #888; }
+
+/* ── FOOTER ── */
+.footer { background: #111; padding: 32px 20px; text-align: center; }
+.footer p { color: #555; font-size: 13px; line-height: 1.9; }
+.footer a { color: #666; text-decoration: none; }
+.footer a:hover { color: #aaa; }
+.footer small { color: #3A3A3A; font-size: 11px; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 600px) {
+    .hero-right { text-align: center; max-width: 100%; }
+    .trust-row  { justify-content: center; gap: 10px; margin-top: 10px; font-size: 12px; }
+    .hero .trust-row { flex-wrap: nowrap; }
+    .hero-product { gap: 24px; }
+    .hero-mockup { width: 160px; min-height: 210px; }
+}
+
+/* ── MOBILE OPTIMIZATIONS ── */
+@media (max-width: 768px) {
+    /* Reduz padding das seções */
+    .sec { padding: 48px 16px; }
+    .hero { padding: 36px 16px 52px; }
+    .final-cta { padding: 56px 16px; }
+    .urgency-mid { padding: 36px 16px 44px; }
+
+    /* Grids viram 1 coluna em telas pequenas */
+    .pain-grid,
+    .benefits-grid,
+    .bonus-grid { grid-template-columns: 1fr; }
+
+    /* Títulos de seção menores */
+    .sec-title { font-size: clamp(20px, 5.5vw, 30px); }
+    .sec-sub { font-size: 14px; margin-bottom: 32px; }
+
+    /* Hero — tudo cabe no primeiro fold */
+    .hero { padding: 24px 16px 32px; }
+    .hero h1 { font-size: clamp(26px, 7vw, 38px); margin-bottom: 10px; }
+    .hero h1 .big { font-size: clamp(34px, 10vw, 52px); }
+    .hero-sub { font-size: 14px; margin-bottom: 16px; line-height: 1.5; }
+    .hero-book-wrap { margin-bottom: 20px; }
+    .hero-img { width: min(300px, 78vw); }
+    .price-center { margin-bottom: 16px; }
+    .price-big { font-size: clamp(42px, 12vw, 60px); }
+    .btn-hero { padding: 16px 24px !important; min-width: unset; width: 100%; font-size: 16px !important; margin-top: 0; }
+
+    /* Urgency card mais compacto */
+    .urgency-card { padding: 30px 20px; }
+    .urgency-title { font-size: clamp(22px, 6vw, 32px); }
+
+    /* Pricing */
+    .pricing-grid { gap: 20px; }
+    .plan-card.featured { transform: none; }
+
+    /* Gallery 2 colunas */
+    .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+
+    /* Testimonials 1 coluna */
+    .testi-feed { grid-template-columns: 1fr; }
+
+    /* Feedback carousel compacto */
+    .fc-slide { width: 190px; }
+    .fc-arrow { width: 32px; height: 32px; font-size: 17px; }
+
+    /* FAQ */
+    .faq-btn { font-size: 14px; padding: 16px 18px; }
+
+    /* Final CTA */
+    .final-cta h2 { font-size: clamp(22px, 6vw, 36px); }
+
+}
+
+/* ── STICKY CTA MOBILE ── */
+.sticky-cta {
+    display: none;
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
+    background: #fff;
+    border-top: 2px solid #2E7D32;
+    padding: 10px 16px;
+    z-index: 9997;
+    box-shadow: 0 -4px 20px rgba(0,0,0,.13);
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    transition: transform .3s ease;
+    transform: translateY(100%);
+}
+.sticky-cta.visible {
+    transform: translateY(0);
+}
+.sticky-cta-info {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+}
+.sticky-cta-from {
+    font-size: 11px;
+    color: #999;
+    text-decoration: line-through;
+}
+.sticky-cta-price {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    font-weight: 900;
+    color: #2E7D32;
+}
+.sticky-cta-btn {
+    background: linear-gradient(135deg, #2E7D32, #43A047);
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: .4px;
+    padding: 13px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    white-space: nowrap;
+    box-shadow: 0 4px 14px rgba(46,125,50,.4);
+}
+@media (max-width: 768px) {
+    .sticky-cta { display: flex; }
+}
+@media (min-width: 769px) {
+    body { padding-bottom: 0 !important; }
+}
