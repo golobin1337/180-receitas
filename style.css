@@ -200,6 +200,18 @@ body {
     50%      { transform: scale(1.03); box-shadow: 0 12px 38px rgba(46,125,50,.65); }
 }
 .btn-green:hover { animation: none; transform: scale(1.05); }
+.btn-outline-green {
+    background: transparent;
+    color: #2E7D32;
+    border: 1.5px solid #2E7D32;
+    font-size: 12px;
+    letter-spacing: .4px;
+    text-transform: uppercase;
+    padding: 10px 24px;
+    border-radius: 50px;
+    margin-top: 12px;
+}
+.btn-outline-green:hover { background: #F9FFF9; }
 .btn-red {
     background: linear-gradient(135deg, #C62828, #E53935);
     color: #fff;
