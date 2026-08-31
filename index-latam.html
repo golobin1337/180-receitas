@@ -10,6 +10,10 @@
     <link rel="preload" as="image" href="public/hero.jpg">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;0,800;0,900;1,800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Bônus desta página usam mockups em tamanho natural, não fotos quadradas cropadas */
+        .bonus-sec .bonus-img { width: auto; height: auto; max-width: 100%; object-fit: contain; }
+    </style>
 
     <script type="text/javascript">
     (function(c,l,a,r,i,t,y){
@@ -43,19 +47,6 @@
 
     <div class="hero-book-wrap">
         <img src="public/herolatam.jpg" alt="180 Recetas de Carne Molida" class="hero-img" fetchpriority="high" decoding="async">
-    </div>
-
-    <div class="price-center">
-        <div class="price-from">De <span class="price-strike">$47.00</span> por apenas</div>
-        <div class="price-big"><span class="price-currency">$</span>7.90</div>
-    </div>
-
-    <a href="#comprar" class="btn btn-green btn-hero">QUIERO LAS RECETAS AHORA →</a>
-
-    <div class="trust-row" style="justify-content:center; margin-top:16px;">
-        <div class="ti">🔒 Compra Segura</div>
-        <div class="ti">🛡️ Garantía 7 días</div>
-        <div class="ti">⚡ Acceso Inmediato</div>
     </div>
 </section>
 
@@ -95,14 +86,6 @@
         </div>
     </div>
 </section>
-
-<div class="transition-block">
-    <div class="transition-block-inner">
-        <span class="transition-block-icon">🍽️</span>
-        <p>Existe una forma <span>mejor y mucho más rica</span> de aprovechar la carne molida</p>
-        <div class="transition-block-line"></div>
-    </div>
-</div>
 
 <!-- ════════════════════════════════════
      DOBRA 5 — GALERIA DE RECETAS
@@ -216,153 +199,17 @@
     <div class="sec-inner">
         <h2 class="sec-title">+1697 PERSONAS YA <span class="r">TRANSFORMARON SU COCINA</span></h2>
 
-        <div class="rating-overview">
-            <div class="rating-big">4.9</div>
-            <div class="stars-big">★★★★★</div>
-            <div class="rating-count">Basado en 2.847 reseñas verificadas</div>
-            <div class="rating-bars">
-                <div class="rb-row"><span>5 ★</span><div class="bar-track"><div class="bar-fill" style="width:91%"></div></div><span>91%</span></div>
-                <div class="rb-row"><span>4 ★</span><div class="bar-track"><div class="bar-fill" style="width:7%"></div></div><span>7%</span></div>
-                <div class="rb-row"><span>3 ★</span><div class="bar-track"><div class="bar-fill" style="width:1%"></div></div><span>1%</span></div>
-                <div class="rb-row"><span>2 ★</span><div class="bar-track"><div class="bar-fill" style="width:.5%"></div></div><span>0%</span></div>
-                <div class="rb-row"><span>1 ★</span><div class="bar-track"><div class="bar-fill" style="width:.5%"></div></div><span>0%</span></div>
+        <div class="feedback-carousel">
+            <button class="fc-arrow fc-arrow-prev" onclick="scrollFeedback(this, -1)" aria-label="Anterior">‹</button>
+            <div class="fc-track" id="feedback-track">
+                <div class="fc-slide"><img src="public/feedback/feedback-1.jpg" alt="Testimonio de clienta 1" loading="lazy" decoding="async"></div>
+                <div class="fc-slide"><img src="public/feedback/feedback-2.jpg" alt="Testimonio de clienta 2" loading="lazy" decoding="async"></div>
+                <div class="fc-slide"><img src="public/feedback/feedback-3.jpg" alt="Testimonio de clienta 3" loading="lazy" decoding="async"></div>
+                <div class="fc-slide"><img src="public/feedback/feedback-4.jpg" alt="Testimonio de clienta 4" loading="lazy" decoding="async"></div>
+                <div class="fc-slide"><img src="public/feedback/feedback-5.jpg" alt="Testimonio de clienta 5" loading="lazy" decoding="async"></div>
+                <div class="fc-slide"><img src="public/feedback/feedback-6.jpg" alt="Testimonio de clienta 6" loading="lazy" decoding="async"></div>
             </div>
-        </div>
-
-        <div class="testi-feed">
-
-            <div class="testi-card">
-                <div class="testi-head">
-                    <div class="testi-head-left">
-                        <div class="testi-avatar" style="background:#E91E63;">AP</div>
-                        <div>
-                            <div class="testi-name">Ana Paula M.</div>
-                            <div class="testi-time">2h</div>
-                        </div>
-                    </div>
-                    <div class="testi-dots">···</div>
-                </div>
-                <p class="testi-text">Me encantó, estas recetas son sensacionales, hice el pastel cremoso para mis hijos y quedó perfecto. ¡Ahora es el plato favorito en casa!</p>
-                <div class="testi-actions">
-                    <div class="testi-reaction-count">❤️ 23</div>
-                    <div class="testi-btns">
-                        <button class="testi-btn">Me gusta</button>
-                        <button class="testi-btn">Comentar</button>
-                        <button class="testi-btn">Compartir</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="testi-card">
-                <div class="testi-head">
-                    <div class="testi-head-left">
-                        <div class="testi-avatar" style="background:#1976D2;">CR</div>
-                        <div>
-                            <div class="testi-name">Carlos R.</div>
-                            <div class="testi-time">5h</div>
-                        </div>
-                    </div>
-                    <div class="testi-dots">···</div>
-                </div>
-                <p class="testi-text">La variedad lo cambió todo jaja, yo hacía la carne molida siempre igual y ya era aburrido, ahora acierto siempre, nunca más repetí el mismo plato...</p>
-                <div class="testi-actions">
-                    <div class="testi-reaction-count">❤️ 34</div>
-                    <div class="testi-btns">
-                        <button class="testi-btn">Me gusta</button>
-                        <button class="testi-btn">Comentar</button>
-                        <button class="testi-btn">Compartir</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="testi-card">
-                <div class="testi-head">
-                    <div class="testi-head-left">
-                        <div class="testi-avatar" style="background:#7B1FA2;">FL</div>
-                        <div>
-                            <div class="testi-name">Fernanda L.</div>
-                            <div class="testi-time">1d</div>
-                        </div>
-                    </div>
-                    <div class="testi-dots">···</div>
-                </div>
-                <p class="testi-text">¡Estoy impresionada con la cantidad de recetas! Lo compré pensando que iba a usar poco y ya hice 8 recetas en el primer mes. ¡Mi esposo se volvió mi mayor fan! 💗</p>
-                <div class="testi-actions">
-                    <div class="testi-reaction-count">❤️ 45</div>
-                    <div class="testi-btns">
-                        <button class="testi-btn">Me gusta</button>
-                        <button class="testi-btn">Comentar</button>
-                        <button class="testi-btn">Compartir</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="testi-card">
-                <div class="testi-head">
-                    <div class="testi-head-left">
-                        <div class="testi-avatar" style="background:#2E7D32;">RS</div>
-                        <div>
-                            <div class="testi-name">Ricardo S.</div>
-                            <div class="testi-time">1d</div>
-                        </div>
-                    </div>
-                    <div class="testi-dots">···</div>
-                </div>
-                <p class="testi-text">Los bonos valen más que el libro principal. Los condimentos y salsas transformaron por completo mi cocina. ¡Lo recomiendo muchísimo!</p>
-                <div class="testi-actions">
-                    <div class="testi-reaction-count">❤️ 18</div>
-                    <div class="testi-btns">
-                        <button class="testi-btn">Me gusta</button>
-                        <button class="testi-btn">Comentar</button>
-                        <button class="testi-btn">Compartir</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="testi-card">
-                <div class="testi-head">
-                    <div class="testi-head-left">
-                        <div class="testi-avatar" style="background:#F57C00;">AT</div>
-                        <div>
-                            <div class="testi-name">Andrés T.</div>
-                            <div class="testi-time">2d</div>
-                        </div>
-                    </div>
-                    <div class="testi-dots">···</div>
-                </div>
-                <p class="testi-text">Todos los domingos preparo el almuerzo para la familia, sigo las recetas y mejoré mucho la calidad de los platos que hago. Todos me felicitaron, y con esa salsa ni se diga</p>
-                <div class="testi-actions">
-                    <div class="testi-reaction-count">❤️ 29</div>
-                    <div class="testi-btns">
-                        <button class="testi-btn">Me gusta</button>
-                        <button class="testi-btn">Comentar</button>
-                        <button class="testi-btn">Compartir</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="testi-card">
-                <div class="testi-head">
-                    <div class="testi-head-left">
-                        <div class="testi-avatar" style="background:#C62828;">MC</div>
-                        <div>
-                            <div class="testi-name">Mariana C.</div>
-                            <div class="testi-time">3d</div>
-                        </div>
-                    </div>
-                    <div class="testi-dots">···</div>
-                </div>
-                <p class="testi-text">Recibí la guía por WhatsApp en menos de 5 minutos. Ya estaba cocinando ese mismo día. Súper práctico y las fotos de las recetas quedaron hermosas</p>
-                <div class="testi-actions">
-                    <div class="testi-reaction-count">❤️ 51</div>
-                    <div class="testi-btns">
-                        <button class="testi-btn">Me gusta</button>
-                        <button class="testi-btn">Comentar</button>
-                        <button class="testi-btn">Compartir</button>
-                    </div>
-                </div>
-            </div>
-
+            <button class="fc-arrow fc-arrow-next" onclick="scrollFeedback(this, 1)" aria-label="Siguiente">›</button>
         </div>
     </div>
 </section>
@@ -378,34 +225,37 @@
         <div class="bonus-grid">
             <div class="bonus-card">
                 <div class="bonus-tag">🎁 Bono #1</div>
-                <img src="public/tempero.jpg" alt="Aderezos y Salsas" class="bonus-img" loading="lazy" decoding="async">
+                <img src="public/1.png" alt="Aderezos y Salsas" class="bonus-img" loading="lazy" decoding="async">
                 <div class="bonus-title">Aderezos y Salsas que Transforman Cualquier Plato</div>
                 <div class="bonus-desc">Salsas y mezclas de especias que hacen que la carne molida parezca hecha en restaurante. Ingredientes simples, resultado sorprendente.</div>
             </div>
             <div class="bonus-card">
                 <div class="bonus-tag">🎁 Bono #2</div>
-                <img src="public/lista.jpg" alt="Lista de Compras" class="bonus-img" loading="lazy" decoding="async">
+                <img src="public/2.png" alt="Lista de Compras" class="bonus-img" loading="lazy" decoding="async">
                 <div class="bonus-title">Lista de Compras</div>
                 <div class="bonus-desc">Lista optimizada para comprar solo lo que necesitas, sin desperdicios y ahorrando bastante en el mercado.</div>
             </div>
             <div class="bonus-card">
                 <div class="bonus-tag">🎁 Bono #3</div>
-                <img src="public/lanche.jpg" alt="Merienda Resuelta" class="bonus-img" loading="lazy" decoding="async">
+                <img src="public/3.png" alt="Merienda Resuelta" class="bonus-img" loading="lazy" decoding="async">
                 <div class="bonus-title">Merienda Resuelta</div>
                 <div class="bonus-desc">Meriendas prácticas y deliciosas para preparar en menos de 15 minutos. Perfectas para el ajetreo del día a día.</div>
             </div>
             <div class="bonus-card">
                 <div class="bonus-tag">🎁 Bono #4</div>
+                <img src="public/4.png" alt="Congela Sin Perder Sabor" class="bonus-img" loading="lazy" decoding="async">
                 <div class="bonus-title">Congela Sin Perder Sabor</div>
                 <div class="bonus-desc">Cómo congelar tu carne molida en porciones para no desperdiciar nada. Aprende el método correcto para que, al sacarla del congelador, sepa como recién preparada — no como comida vieja recalentada.</div>
             </div>
             <div class="bonus-card">
                 <div class="bonus-tag">🎁 Bono #5</div>
+                <img src="public/5.png" alt="Descongela sin Arruinar la Textura" class="bonus-img" loading="lazy" decoding="async">
                 <div class="bonus-title">Descongela sin Arruinar la Textura</div>
                 <div class="bonus-desc">El error que hace que la carne molida quede aguada, sin sabor y con mal aspecto — y cómo evitarlo siempre. La forma correcta y segura de descongelar, para que cada plato salga tan bueno como el primer día.</div>
             </div>
             <div class="bonus-card">
                 <div class="bonus-tag">🎁 Bono #6</div>
+                <img src="public/6.png" alt="Guarda Tu Carne Molida Como un Profesional" class="bonus-img" loading="lazy" decoding="async">
                 <div class="bonus-title">Guarda Tu Carne Molida Como un Profesional</div>
                 <div class="bonus-desc">Cuánto tiempo dura realmente en el refrigerador, dónde guardarla y cómo saber si ya no está buena. Para que nunca más tires dinero a la basura por no saber conservarla bien.</div>
             </div>
