@@ -19,6 +19,25 @@ function scrollFeedback(btn, dir) {
     track.scrollBy({ left: amount * dir, behavior: 'smooth' });
 }
 
+document.querySelectorAll('.fc-track').forEach(track => {
+    const advance = () => {
+        const slide = track.querySelector('.fc-slide');
+        if (!slide) return;
+        const amount = slide.getBoundingClientRect().width + 16;
+        const atEnd = track.scrollLeft + track.clientWidth >= track.scrollWidth - 5;
+        track.scrollTo({ left: atEnd ? 0 : track.scrollLeft + amount, behavior: 'smooth' });
+    };
+
+    let autoplay = setInterval(advance, 4000);
+    const pause = () => clearInterval(autoplay);
+    const resume = () => { clearInterval(autoplay); autoplay = setInterval(advance, 4000); };
+
+    track.addEventListener('mouseenter', pause);
+    track.addEventListener('mouseleave', resume);
+    track.addEventListener('touchstart', pause, { passive: true });
+    track.addEventListener('touchend', resume);
+});
+
 function toggleFaq(btn) {
     const answer = btn.nextElementSibling;
     const isOpen = answer.classList.contains('open');
