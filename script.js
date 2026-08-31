@@ -12,21 +12,25 @@ function redirectWithParams(destination) {
     }
 }
 
-function scrollFeedback(btn, dir) {
-    const track = btn.parentElement.querySelector('.fc-track');
-    const slide = track.querySelector('.fc-slide');
-    const amount = slide ? slide.getBoundingClientRect().width + 16 : 260;
-    track.scrollBy({ left: amount * dir, behavior: 'smooth' });
-}
+document.querySelectorAll('.feedback-carousel').forEach(carousel => {
+    const track = carousel.querySelector('.fc-track');
+    const slides = track.querySelectorAll('.fc-slide');
+    const dots = carousel.querySelectorAll('.fc-dot');
 
-document.querySelectorAll('.fc-track').forEach(track => {
-    const advance = () => {
-        const slide = track.querySelector('.fc-slide');
-        if (!slide) return;
-        const amount = slide.getBoundingClientRect().width + 16;
-        const atEnd = track.scrollLeft + track.clientWidth >= track.scrollWidth - 5;
-        track.scrollTo({ left: atEnd ? 0 : track.scrollLeft + amount, behavior: 'smooth' });
+    const currentIndex = () => Math.round(track.scrollLeft / track.clientWidth);
+
+    const setActiveDot = index => {
+        dots.forEach((dot, i) => dot.classList.toggle('active', i === index));
     };
+
+    const goTo = index => {
+        track.scrollTo({ left: slides[index].offsetLeft, behavior: 'smooth' });
+    };
+
+    dots.forEach((dot, i) => dot.addEventListener('click', () => { goTo(i); resume(); }));
+    track.addEventListener('scroll', () => setActiveDot(currentIndex()), { passive: true });
+
+    const advance = () => goTo((currentIndex() + 1) % slides.length);
 
     let autoplay = setInterval(advance, 4000);
     const pause = () => clearInterval(autoplay);
