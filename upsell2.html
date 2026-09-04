@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Oferta Especial — 100 Receitas em Vídeo Passo a Passo</title>
+    <title>Espera! Seu pedido ainda não está completo</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
@@ -14,7 +14,7 @@
         t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
         y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
     })(window, document, "clarity", "script", "wrnmn7nr8g");
-    </script>
+</script>
 
     <script
     src="https://cdn.utmify.com.br/scripts/utms/latest.js"
@@ -44,373 +44,163 @@
 
         body {
             font-family: 'Open Sans', sans-serif;
-            background: #F5F5F5;
-            color: #333;
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
+            background: #F7F7F7;
+            color: #222;
         }
 
-        .page {
-            width: 100%;
-            max-width: 480px;
-            background: #fff;
-            min-height: 100vh;
-        }
-
-        /* ── HEADER ── */
-        .up-header {
-            background: linear-gradient(160deg, #E8531A 0%, #C0392B 100%);
-            padding: 28px 24px 32px;
-            text-align: center;
-        }
-
-        .up-badge {
-            display: inline-block;
-            background: rgba(255,255,255,.18);
-            border: 1.5px solid rgba(255,255,255,.4);
+        /* ── TOP BAR ── */
+        .top-bar {
+            position: fixed;
+            top: 0; left: 0; width: 100%;
+            background: #B71C1C;
             color: #fff;
             font-family: 'Montserrat', sans-serif;
             font-weight: 800;
-            font-size: 11px;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            padding: 6px 16px;
-            border-radius: 20px;
-            margin-bottom: 18px;
-        }
-
-        .up-title {
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 900;
-            font-size: clamp(24px, 6.5vw, 32px);
-            color: #fff;
-            line-height: 1.1;
-            margin-bottom: 14px;
-        }
-
-        .up-title span {
-            color: #FFD700;
-        }
-
-        .up-subtitle {
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 700;
-            font-size: clamp(12px, 3.2vw, 14px);
-            color: rgba(255,255,255,.9);
-            letter-spacing: .5px;
-            text-transform: uppercase;
-            line-height: 1.6;
-        }
-
-        .up-subtitle strong { color: #FFD700; }
-
-        /* ── VIDEO PREVIEW ── */
-        .up-video-block {
-            background: #FFF8F2;
-            padding: 20px 24px;
+            font-size: clamp(10px, 2.8vw, 13px);
             text-align: center;
-            border-bottom: 1px solid #F0F0F0;
-        }
-
-        .up-video-thumb {
-            position: relative;
-            display: inline-block;
-            width: 100%;
-            max-width: 380px;
-            border-radius: 12px;
-            overflow: hidden;
-            background: #1A2A3A;
-        }
-
-        .up-video-placeholder {
-            width: 100%;
-            aspect-ratio: 16/9;
-            background: linear-gradient(135deg, #1A2A3A, #2C3E50);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 12px;
-            border-radius: 12px;
-        }
-
-        .up-play-icon {
-            width: 60px;
-            height: 60px;
-            background: rgba(255,255,255,.15);
-            border: 3px solid rgba(255,255,255,.6);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 22px;
-            padding-left: 4px;
-        }
-
-        .up-video-label {
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 700;
-            font-size: 13px;
-            color: rgba(255,255,255,.7);
-            letter-spacing: .5px;
-        }
-
-        /* ── PRICE BLOCK ── */
-        .up-price-block {
-            background: #fff;
-            padding: 24px 24px 20px;
-            text-align: center;
-            border-bottom: 1px solid #F0F0F0;
-        }
-
-        .up-price-row {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 12px;
-            margin-bottom: 8px;
-        }
-
-        .up-price-old {
-            font-size: 15px;
-            color: #999;
-            text-decoration: line-through;
-        }
-
-        .up-savings {
-            display: inline-block;
-            background: #E8F5E9;
-            color: #2E7D32;
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 800;
-            font-size: 12px;
-            padding: 4px 10px;
-            border-radius: 20px;
-        }
-
-        .up-price-big {
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 900;
-            font-size: clamp(52px, 14vw, 72px);
-            color: #2E7D32;
-            line-height: 1;
-            margin-bottom: 6px;
-        }
-
-        .up-price-big sup { font-size: 22px; vertical-align: super; }
-        .up-price-big .cents { font-size: 36px; vertical-align: super; }
-
-        .up-price-note {
-            font-size: 13px;
-            color: #888;
-        }
-
-        /* ── FEATURES ── */
-        .up-features-block {
-            padding: 22px 24px;
-            border-bottom: 1px solid #F0F0F0;
-        }
-
-        .up-features-label {
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 800;
-            font-size: 12px;
-            letter-spacing: 1px;
-            color: #444;
-            text-transform: uppercase;
-            margin-bottom: 16px;
-        }
-
-        .up-feature {
-            display: flex;
-            align-items: flex-start;
-            gap: 10px;
-            padding: 8px 0;
-            border-bottom: 1px solid #F5F5F5;
-            font-size: 14.5px;
-            color: #333;
+            padding: 9px 16px;
+            z-index: 999;
+            letter-spacing: .3px;
             line-height: 1.4;
         }
 
-        .up-feature:last-child { border-bottom: none; }
-
-        .up-chk {
-            flex-shrink: 0;
-            width: 20px;
-            height: 20px;
-            background: #2E7D32;
-            border-radius: 4px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #fff;
-            font-size: 12px;
-            font-weight: 900;
-            margin-top: 1px;
+        /* ── LAYOUT ── */
+        .page-wrap {
+            padding-top: 56px;
         }
 
-        .up-gift { flex-shrink: 0; font-size: 18px; margin-top: 1px; }
-
-        /* ── CTA ── */
-        .up-cta-block {
-            padding: 24px 20px 32px;
+        .main {
+            max-width: 560px;
+            margin: 0 auto;
+            padding: 32px 20px 60px;
             text-align: center;
         }
 
-        .up-btn {
+        /* ── HEADLINE ── */
+        .headline {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 900;
+            font-size: clamp(20px, 5.5vw, 28px);
+            color: #1A1A2E;
+            line-height: 1.3;
+            margin-bottom: 28px;
+        }
+
+        /* ── VIDEO ── */
+        .video-wrap {
+            width: 100%;
+            max-width: 400px;
+            margin: 0 auto 20px;
+        }
+
+        /* ── COPY ABAIXO DO VIDEO ── */
+        .video-copy {
+            font-size: clamp(14px, 3.5vw, 16px);
+            color: #555;
+            line-height: 1.7;
+            margin-bottom: 40px;
+            font-style: italic;
+        }
+
+        /* ── BOTÃO CTA ── */
+        .cta-wrap {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+            animation: fadeIn .6s ease;
+        }
+
+        .cta-wrap.visible {
+            display: flex;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(12px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        .cta-btn {
             display: block;
             width: 100%;
+            max-width: 420px;
             background: linear-gradient(135deg, #2E7D32, #43A047);
             color: #fff;
             font-family: 'Montserrat', sans-serif;
             font-weight: 900;
             font-size: clamp(15px, 4vw, 18px);
-            text-transform: uppercase;
-            letter-spacing: .5px;
-            padding: 20px 24px;
-            border-radius: 10px;
+            text-align: center;
+            padding: 18px 24px;
+            border-radius: 50px;
             border: none;
             cursor: pointer;
+            letter-spacing: .5px;
+            box-shadow: 0 6px 20px rgba(46,125,50,.35);
             text-decoration: none;
-            box-shadow: 0 8px 28px rgba(46,125,50,.45);
-            animation: btn-pulse 1.9s ease-in-out infinite;
-            margin-bottom: 18px;
+            line-height: 1.3;
         }
 
-        @keyframes btn-pulse {
-            0%,100% { transform: scale(1);    box-shadow: 0 8px 28px rgba(46,125,50,.45); }
-            50%      { transform: scale(1.02); box-shadow: 0 12px 36px rgba(46,125,50,.6); }
+        .cta-btn:hover {
+            background: linear-gradient(135deg, #1B5E20, #2E7D32);
+            box-shadow: 0 8px 24px rgba(46,125,50,.45);
         }
 
-        .up-btn:hover { animation: none; transform: scale(1.02); }
-
-        .up-decline {
-            display: block;
+        .cta-security {
             font-size: 12px;
-            color: #999;
-            text-decoration: underline;
-            cursor: pointer;
-            margin-bottom: 20px;
-            background: none;
-            border: none;
-            font-family: 'Open Sans', sans-serif;
-        }
-
-        .up-decline:hover { color: #666; }
-
-        .up-trust {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 6px;
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 700;
-            font-size: 11px;
             color: #888;
-            letter-spacing: .5px;
-            text-transform: uppercase;
+            font-family: 'Montserrat', sans-serif;
         }
     </style>
-
-<script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "x1g8g0smk1");
-</script>
-
 </head>
 <body>
 
-<div class="page">
-
-    <!-- HEADER -->
-    <div class="up-header">
-        <div class="up-badge">🎬 Oferta Exclusiva para Quem Acabou de Comprar – Só Agora!</div>
-        <h1 class="up-title"><span>Complete a experiência das suas receitas com este pacote em vídeo!</span> Veja cada uma sendo feita do início ao fim sem travar, sem errar, sem dúvida.</h1>
-        <p class="up-subtitle">
-            +100 vídeos completos. Você assiste, repete quantas vezes quiser e nunca mais fica no meio da receita sem saber o que fazer.
-        </p>
+    <div class="top-bar">
+        ⚠️ NÃO FECHE ESTA PÁGINA NEM CLIQUE EM VOLTAR, ISSO PODE GERAR UM ERRO NA SUA COMPRA. ⚠️
     </div>
 
-    <!-- HERO IMAGE -->
-    <div class="up-video-block">
-        <img src="public/heroupsell.jpg" alt="100 Receitas em Vídeo Passo a Passo" style="width:100%; display:block; border-radius:10px;">
-    </div>
+    <div class="page-wrap">
+        <div class="main">
 
-    <!-- PREÇO -->
-    <div class="up-price-block">
-        <div class="up-price-row">
-            <span class="up-price-old">De R$67,00</span>
-            <span class="up-savings">ECONOMIZE R$47,00</span>
-        </div>
-        <div class="up-price-big"><sup>R$</sup>19<span class="cents">,90</span></div>
-        <div class="up-price-note">acesso vitalício · entrega imediata no e-mail</div>
-    </div>
+            <h1 class="headline">
+                Seu pedido foi aprovado, mas ainda não está completo.<br>
+                Veja a mensagem abaixo para liberar seu acesso.
+            </h1>
 
-    <!-- FEATURES -->
-    <div class="up-features-block">
-        <div class="up-features-label">O que você ganha:</div>
+            <div class="video-wrap">
+                <vturb-smartplayer id="vid-6a9ad935937d69c39a5e051f" style="display: block; margin: 0 auto; width: 100%; max-width: 400px;"><div class="vturb-player-placeholder" style="position: relative; width: 100%; padding: 177.91666666666666% 0 0; z-index: 0; background-color: black;"></div></vturb-smartplayer> <script type="text/javascript"> var s=document.createElement("script"); s.src="https://scripts.converteai.net/35664cc2-5784-4805-94f2-523cf400a138/players/6a9ad935937d69c39a5e051f/v4/player.js", s.async=!0,document.head.appendChild(s); </script>
+            </div>
 
-        <div class="up-feature">
-            <span class="up-chk">✓</span>
-            <span>+100 Receitas de Carne Moída em Vídeo</span>
-        </div>
-        <div class="up-feature">
-            <span class="up-chk">✓</span>
-            <span>Passo a passo completo do início ao fim</span>
-        </div>
-        <div class="up-feature">
-            <span class="up-chk">✓</span>
-            <span>Vídeos curtos e fáceis de acompanhar</span>
-        </div>
-        <div class="up-feature">
-            <span class="up-chk">✓</span>
-            <span>Assista no celular, tablet ou computador</span>
-        </div>
-        <div class="up-feature">
-            <span class="up-chk">✓</span>
-            <span>Acesso Vitalício + Novos Vídeos</span>
-        </div>
-        <div class="up-feature">
-            <span class="up-chk">✓</span>
-            <span>Entrega imediata no e-mail</span>
+            <p class="video-copy">
+                Faça isso agora: veja a mensagem acima até o fim.<br>
+                Seu link de acesso vai aparecer logo abaixo.
+            </p>
+
+            <div class="cta-wrap" id="cta-block">
+                <a href="javascript:void(0)" onclick="redirectWithParams('https://mundoconhecimento.mycartpanda.com/checkout/182870721:1')" class="cta-btn">QUERO GARANTIR MEU ACESSO</a>
+                <p class="cta-security">🔒 Pagamento 100% Seguro</p>
+            </div>
+
         </div>
     </div>
 
-    <!-- CTA -->
-    <div class="up-cta-block">
-        <a href="javascript:void(0)"
-           onclick="redirectWithParams('https://mundoconhecimento.mycartpanda.com/checkout/182870721:1')"
-           class="up-btn">
-            SIM! QUERO AS RECEITAS<br>EM VÍDEO AGORA!
-        </a>
-        <button class="up-decline"
-                onclick="redirectWithParams('downsell.html')">
-            Não, obrigado. Não quero aprender com vídeos.
-        </button>
-        <div class="up-trust">🔒 Compra 100% Segura e Garantida</div>
-    </div>
-
-</div>
-
-<script>
-function redirectWithParams(destination) {
-    const currentParams = window.location.search;
-    if (!currentParams) {
-        window.location.href = destination;
-        return;
+    <script>
+    function redirectWithParams(destination) {
+        const currentParams = window.location.search;
+        if (!currentParams) { window.location.href = destination; return; }
+        window.location.href = destination.includes("?")
+            ? destination + "&" + currentParams.substring(1)
+            : destination + currentParams;
     }
-    if (destination.includes("?")) {
-        window.location.href = destination + "&" + currentParams.substring(1);
-    } else {
-        window.location.href = destination + currentParams;
-    }
-}
-</script>
+
+    // Botão aparece aos 4:30 (270 segundos)
+    setTimeout(function() {
+        const cta = document.getElementById('cta-block');
+        if (cta) {
+            cta.classList.add('visible');
+            cta.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+    }, 270000);
+    </script>
 
 </body>
 </html>
