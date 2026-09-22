@@ -3,14 +3,14 @@
 body {
     font-family: 'Open Sans', sans-serif;
     color: #333;
-    background: #FFF8F0;
+    background: #fff;
     overflow-x: hidden;
 }
 
 /* ── URGENCY BAR ── */
 .urgency-bar {
-    background: #FFC845;
-    color: #2B1B00;
+    background: #B71C1C;
+    color: #fff;
     text-align: center;
     padding: 13px 20px;
     font-family: 'Montserrat', sans-serif;
@@ -21,11 +21,16 @@ body {
     position: sticky;
     top: 0;
     z-index: 9999;
+    animation: bar-pulse 2.4s ease-in-out infinite;
+}
+@keyframes bar-pulse {
+    0%,100% { background: #B71C1C; }
+    50%      { background: #C62828; }
 }
 .urgency-bar .badge {
     display: inline-block;
-    background: #2B1B00;
-    color: #FFC845;
+    background: #fff;
+    color: #B71C1C;
     font-size: 12px;
     font-weight: 900;
     padding: 2px 10px;
@@ -831,22 +836,7 @@ body {
 }
 .fc-dot.active { width: 22px; background: #2E7D32; }
 
-/* ── DOBRA 9 — COMO VOCÊ VAI RECEBER ── */
-.receive-sec { background: #FFF3E5; }
-.receive-title-main { color: #4A2E12; }
-.receive-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 18px; }
-.receive-card {
-    background: #fff;
-    border-radius: 16px;
-    padding: 30px 20px;
-    text-align: center;
-    box-shadow: 0 4px 14px rgba(0,0,0,.06);
-}
-.receive-icon { font-size: 36px; margin-bottom: 12px; }
-.receive-title { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 15px; color: #4A2E12; margin-bottom: 6px; }
-.receive-desc { font-size: 13.5px; color: #666; line-height: 1.5; }
-
-/* ── DOBRA 10 — FAQ ── */
+/* ── DOBRA 9 — FAQ ── */
 .faq-sec { background: #fff; }
 .faq-list { max-width: 720px; margin: 0 auto; }
 .faq-item { border: 1px solid #E4E4E4; border-radius: 10px; margin-bottom: 12px; overflow: hidden; }
@@ -872,7 +862,7 @@ body {
 }
 .faq-answer.open { display: block; }
 
-/* ── DOBRA 11 — FINAL CTA ── */
+/* ── DOBRA 10 — FINAL CTA ── */
 .final-cta {
     background: #FFF8F2;
     border-top: 1px solid #FFE8D6;
