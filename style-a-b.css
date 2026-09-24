@@ -445,8 +445,7 @@ body {
 
 /* ── DOBRA 4 — BENEFITS ── */
 .benefits-sec { background: #fff; }
-.benefits-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(278px, 1fr)); gap: 22px; margin-top: 28px; }
-.benefit-card {
+.benefits-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(278px, 1fr)); gap: 22px; margin-top: 28px; }.benefit-card {
     background: #F6FFF6;
     border: 1px solid #C8E6C9;
     border-top: 4px solid #2E7D32;
